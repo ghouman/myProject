@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tomcatProjectProperties>
+    <rootDir>/</rootDir>
+    <exportSource>false</exportSource>
+    <reloadable>true</reloadable>
+    <redirectLogger>true</redirectLogger>
+    <updateXml>true</updateXml>
+    <warLocation>D:\devSoft\apache-tomcat-7.0.26\webapps\weigaoSys.war</warLocation>
+    <extraInfo></extraInfo>
+    <webPath></webPath>
+</tomcatProjectProperties>

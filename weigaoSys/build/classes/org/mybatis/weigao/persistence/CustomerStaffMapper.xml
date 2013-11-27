@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.mybatis.weigao.persistence.CustomerStaffMapper">
+
+    <cache/>
+
+    <select id="getCustomerStaff" parameterType="CustomerStaff" resultType="CustomerStaff">
+        SELECT UID
+              ,IsSelect
+              ,IsDisable
+              ,Creator
+              ,CreationDate
+              ,Operator
+              ,OperDate
+              ,CustomerID
+              ,Staff
+              ,StaffDuty
+              ,StaffTel
+              ,StaffForce
+              ,StaffFavor
+              ,StaffImpact
+              ,StaffAge
+              ,StaffBirth
+          FROM bCUSTOMERStaff
+        WHERE 1=1
+        <if test="customerId != null">
+            AND CustomerID like '%'+#{customerId}+'%'
+        </if>
+
+    </select>
+
+
+</mapper>

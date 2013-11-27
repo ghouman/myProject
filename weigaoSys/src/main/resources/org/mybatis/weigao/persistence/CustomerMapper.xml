@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.mybatis.weigao.persistence.CustomerMapper">
+
+    <cache/>
+
+    <select id="getCustomer" parameterType="Customer" resultType="Customer">
+        SELECT CUST.uid
+        ,CUST.IsSelect
+        ,CUST.IsDisable
+        ,CUST.Creator
+        ,CUST.CreationDate
+        ,CUST.Operator
+        ,CUST.OperDate
+        ,CUST.CUSTOMER as customerName
+        ,CUST.ZECT
+        ,CUST.Coop_Type
+        ,CUST.CustVAL
+        ,CUST.Feedback
+        ,CUST.Address
+        ,CUST.Website
+        ,CUST.HealthClass
+        ,CUST.HealtMemo
+        ,CUST.Hierarchy
+        ,CUST.Open_DT
+        ,CUST.Coop_DT
+        ,CUST.PortID
+        ,CUST.Clerk
+        ,CUST.SalesRegion
+        ,CUST.LabOffice
+        ,CUST.LabOMemo
+        ,CUST.LabTEL
+        ,CUST.HospitalMemo
+        ,CUST.PostalCode
+        ,CUST.IsActive
+        ,CUST.IsDirect
+        ,CUST.ChargeLimit
+        ,CUST.IsVerify
+        ,CUST.Verifier
+        ,CUST.VerifyDate
+        ,P1.Port, P1.ProvinceID, P2.Province
+        FROM [WEGO].[dbo].[bCUSTOMER] AS CUST LEFT OUTER JOIN
+        dbo.b0Port AS P1 ON CUST.PortID = P1.UID LEFT OUTER JOIN
+        dbo.b0Province AS P2 ON P1.ProvinceID = P2.UID
+        WHERE 1=1
+        <if test="customerName != null">
+            AND CUST.CUSTOMER like '%'+#{customerName}+'%'
+        </if>
+        <if test="salesRegion != null">
+            AND CUST.salesRegion like '%'+#{salesRegion}+'%'
+        </if>
+        <if test="clerk != null">
+            AND CUST.clerk like '%'+#{clerk}+'%'
+        </if>
+        <if test="port != null">
+            AND port like '%'+#{port}+'%'
+        </if>
+        <if test="uid != 0">
+                    AND CUST.uid =#{uid}
+                </if>
+    </select>
+
+    <update id="updateCustomer" parameterType="Customer">
+               UPDATE dbo.bCUSTOMER
+               SET
+                  Creator = #{creator},
+                  CreationDate = #{creationDate},
+                  Operator = #{operator},
+                  OperDate = #{operDate},
+                  Customer = #{customerName},
+                  ZECT = #{zect},
+                  Coop_Type = #{coopType},
+                  CustVAL = #{custVal} ,
+                  Feedback = #{feedback},
+                  Address = #{address} ,
+                  Website = #{website},
+                  HealthClass = #{healthClass},
+                  HealtMemo = #{healtMemo},
+                  Hierarchy = #{hierarchy},
+                  Open_DT =  #{openDt} ,
+                  Coop_DT = #{coop_DT} ,
+                  PortID = #{portID},
+                  Clerk = #{clerk},
+                  SalesRegion = #{salesRegion},
+                  LabOffice = #{labOffice},
+                  LabOMemo =  #{labOMemo},
+                  LabTEL = #{labTEL},
+                  HospitalMemo = #{hospitalMemo},
+                  PostalCode = #{postalCode},
+                  IsActive = #{active},
+                  IsDirect = #{direct},
+                  ChargeLimit = #{chargeLimit},
+                  Verifier = #{verifier},
+                  VerifyDate = #{verifyDate}
+               WHERE UID = #{uid}
+           </update>
+
+</mapper>

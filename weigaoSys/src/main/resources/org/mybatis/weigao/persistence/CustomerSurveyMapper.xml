@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.mybatis.weigao.persistence.CustomerSurveyMapper">
+
+    <cache/>
+
+    <select id="getCustomerSurvey" parameterType="CustomerSurvey" resultType="CustomerSurvey">
+        SELECT
+        A.UID,A.SurveyNo,
+        case A.IsCheck when 0 then '否' when 1 then '是' end as checked,
+        case A.IsSubmit when 0 then '否' when 1 then '是' end as submit,
+        case A.IsVerify when 0 then '否' when 1 then '是' end as verify,
+        A.Preparer, A.SurveyDate, CUST.CUSTOMER,A.CustomerID, CUST.ZECT, P1.Port, P2.Province, CUST.Clerk,
+        CUST.SalesRegion,
+        LabOffice,LabTel,Doctor,Nurse,Engineer,A.HospitalMemo,
+        HDF_Machine as hdfMachine,HDF_Capacity as hdfCapacity, WaterTreatment
+        ,HospitalSurgical,
+        RenalClinic,HD ,HF, HDF, CRRT, HP, ChannelDYMO ,ChannelDevice ,IsProduct ,ProductPeriod,
+        IsPlan,PlanDialys, HDF__F1 as hdfF1,NEPD_F1 as nepdF1,HDF__F2 as hdfF2,NEPD_F2 as nepdF2,
+        HDF__F3 as hdfF3 ,NEPD_F3 as nepdF3,A.Feedback ,FB_Note as fbNote
+        FROM dbo.oSurvey AS A LEFT OUTER JOIN
+        dbo.bCUSTOMER AS CUST ON A.CustomerID = CUST.UID LEFT OUTER JOIN
+        dbo.b0Port AS P1 ON CUST.PortID = P1.UID LEFT OUTER JOIN
+        dbo.b0Province AS P2 ON P1.ProvinceID = P2.UID
+        where 1=1
+        <if test="customer != null">
+            and CUST.CUSTOMER like '%'+#{customer}+'%'
+        </if>
+        <if test="uid != 0">
+            and A.uid = #{uid}
+        </if>
+        <if test="surveyNo != null">
+            and A.SurveyNo like '%'+#{surveyNo}+'%'
+        </if>
+        <if test="preparer != null">
+            and A.preparer like '%'+#{preparer}+'%'
+        </if>
+        <if test="checked != null">
+            and A.IsCheck = #{checked}
+        </if>
+        <if test="submit != null">
+            and A.IsSubmit = #{submit}
+        </if>
+        <if test="verify != null">
+            and A.IsVerify = #{verify}
+        </if>
+        <if test="surveyDate != null">
+            and A.SurveyDate = #{surveyDate}
+        </if>
+
+    </select>
+
+    <update id="updateCustomerSurveyStatus" parameterType="CustomerSurvey">
+        UPDATE dbo.oSurvey
+        SET
+        <if test="checked != null">
+            IsCheck = #{checked}
+        </if>
+        <if test="submit != null">
+            IsSubmit = #{submit}
+        </if>
+        <if test="verify != null">
+            IsVerify = #{verify}
+        </if>
+        WHERE UID = #{uid}
+    </update>
+
+    <update id="updateCustomerSurvey" parameterType="CustomerSurvey">
+           UPDATE dbo.oSurvey
+           SET
+              Creator = #{creator},
+              CreationDate = #{creationDate},
+              Operator = #{operator},
+              OperDate = #{operDate},
+              SurveyDate = #{surveyDate},
+              Preparer = #{preparer},
+              PreparerDate = #{preparerDate} ,
+              Checker = #{checker},
+              CheckDate = #{checkDate} ,
+              SubmitUser = #{submitUser},
+              SubmitDate = #{submitDate},
+              Verifier = #{verifier},
+              VerifyDate = #{verifyDate},
+              Z9FinalUser =  #{Z9FinalUser} ,
+              Z9FinalDate = #{Z9FinalDate} ,
+              Doctor = #{doctor},
+              Nurse = #{nurse},
+              Engineer = #{engineer},
+              HospitalMemo = #{hospitalMemo},
+              HDF_Machine =  #{hdfMachine},
+              HDF_Capacity = #{hdfCapacity},
+              WaterTreatment = #{waterTreatment},
+              HospitalSurgical = #{hospitalSurgical},
+              RenalClinic = #{renalClinic},
+              HD = 0,
+              HF = 0,
+              HDF = #{hdf},
+              CRRT = #{crrt},
+              HP = #{hp},
+              ChannelDYMO = #{channelDYMO},
+              ChannelDevice = #{channelDevice},
+              IsProduct = #{ynProduct},
+              ProductPeriod = #{planDialys},
+              IsPlan = #{ynPlan},
+              PlanDialys = #{planDialys},
+              HDF__F1 = #{hdfF1},
+              NEPD_F1 = #{nepdF1},
+              HDF__F2 = #{hdfF2},
+              NEPD_F2 = #{nepdF2},
+              HDF__F3 = #{hdfF3},
+              NEPD_F3 = #{nepdF3},
+              Feedback = #{feedback},
+              FB_Note = #{fbNote}
+           WHERE SurveyNo = #{surveyNo}
+       </update>
+
+       <insert id="addCustomerSurvey" parameterType="CustomerSurvey">
+           INSERT INTO [WEGO].[dbo].[oSurvey]
+           ([IsSelect]
+           ,[IsDisable]
+           ,[Creator]
+           ,[CreationDate]
+           ,[Operator]
+           ,[OperDate]
+           ,[SurveyNo]
+           ,[SurveyDate]
+           ,[Preparer]
+           ,[PreparerDate]
+           ,[IsCheck]
+           ,[Checker]
+           ,[CheckDate]
+           ,[IsSubmit]
+           ,[SubmitUser]
+           ,[SubmitDate]
+           ,[IsVerify]
+           ,[Verifier]
+           ,[VerifyDate]
+           ,[IsZ9Final]
+           ,[Z9FinalUser]
+           ,[Z9FinalDate]
+           ,[CustomerID]
+           ,[Doctor]
+           ,[Nurse]
+           ,[Engineer]
+           ,[HospitalMemo]
+           ,[HDF_Machine]
+           ,[HDF_Capacity]
+           ,[WaterTreatment]
+           ,[HospitalSurgical]
+           ,[RenalClinic]
+           ,[HD]
+           ,[HF]
+           ,[HDF]
+           ,[CRRT]
+           ,[HP]
+           ,[ChannelDYMO]
+           ,[ChannelDevice]
+           ,[IsProduct]
+           ,[ProductPeriod]
+           ,[IsPlan]
+           ,[PlanDialys]
+           ,[HDF__F1]
+           ,[NEPD_F1]
+           ,[HDF__F2]
+           ,[NEPD_F2]
+           ,[HDF__F3]
+           ,[NEPD_F3]
+           ,[Feedback]
+           ,[FB_Note])
+           VALUES
+           (#{select} ,
+           #{disable} ,
+           #{creator} ,
+           #{creationDate},
+           #{operator},
+           #{operDate},
+           #{surveyNo},
+           #{surveyDate},
+           #{preparer},
+           #{preparerDate} ,
+           0 ,
+           #{checker} ,
+           #{checkDate} ,
+           0,
+           #{submitUser},
+           #{submitDate},
+           0,
+           #{verifier},
+           #{verifyDate},
+           0 ,
+           #{Z9FinalUser} ,
+           #{Z9FinalDate} ,
+           #{customerId},
+           #{doctor},
+           #{nurse},
+           #{engineer},
+           #{hospitalMemo},
+           #{hdfMachine},
+           #{hdfCapacity},
+           #{waterTreatment},
+           #{hospitalSurgical},
+           #{renalClinic},
+           #{hd},
+           #{hf},
+           #{hdf},
+           #{crrt},
+           #{hp},
+           #{channelDYMO},
+           #{channelDevice},
+           #{ynProduct},
+           #{productPeriod},
+           #{ynPlan},
+           #{planDialys},
+           #{hdfF1},
+           #{nepdF1} ,
+           #{hdfF2},
+           #{nepdF2},
+           #{hdfF3},
+           #{nepdF3},
+           #{feedback},
+           #{fbNote} )
+       </insert>
+
+
+
+    <select id="getSurveyNo"  resultType="string">
+                    select top 1 Substring(SurveyNo,8,Len(SurveyNo)) from oSurvey where
+            Substring(SurveyNo,4,4)= Datename(year,GetDate()) order by SurveyNo desc
+            </select>
+</mapper>
