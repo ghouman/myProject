@@ -7,6 +7,9 @@ import org.mybatis.weigao.domain.SurveyDetail;
 import org.mybatis.weigao.persistence.CustomerSurveyMapper;
 import org.mybatis.weigao.persistence.SurveyDetailMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -26,13 +29,17 @@ public class CustomerSurveyService {
     @Autowired
     private CustomerSurveyMapper customerSurveyMapper;
     @Autowired
-       private SurveyDetailMapper surveyDetailMapper;
+    private SurveyDetailMapper surveyDetailMapper;
 
     public List<CustomerSurvey> getCustomerSurvey(CustomerSurvey customerSurvey) {
         return customerSurveyMapper.getCustomerSurvey(customerSurvey);
     }
 
-    public List<SurveyDetail> getSurveyDetail(int uid ) {
+    public int countSurveySize(CustomerSurvey customerSurvey) {
+        return customerSurveyMapper.countSurveySize(customerSurvey);
+    }
+
+    public List<SurveyDetail> getSurveyDetail(int uid) {
         return surveyDetailMapper.getSurveyDetail(uid);
     }
 
@@ -41,31 +48,42 @@ public class CustomerSurveyService {
         customerSurveyMapper.updateCustomerSurveyStatus(customerSurvey);
     }
 
+    //更新调研产品明细， 先删除在增加
     @Transactional
     public void updateCustomerSurvey(CustomerSurvey customerSurvey) {
         customerSurveyMapper.updateCustomerSurvey(customerSurvey);
-        String jsonString = customerSurvey.getJsonString();
-                if(!StringUtil.isEmpty(jsonString)){
-                    List<SurveyDetail> surveyDetailList = JsonUtil.getDTOList(jsonString,SurveyDetail.class);
-                    for(int i = 0;i<surveyDetailList.size(); i++){
-                        SurveyDetail surveyDetail = surveyDetailList.get(i);
-                        surveyDetailMapper.updateSurveyDetail(surveyDetail);//保存调研产品明细
-                    }
-                }
+        surveyDetailMapper.delAllDetailBySurveyNo(customerSurvey.getSurveyNo());
+        this.saveSurveyDetail(customerSurvey.getJsonString());
     }
 
-    @Transactional
-    public void addCustomerSurvey(CustomerSurvey customerSurvey) {
-        customerSurveyMapper.addCustomerSurvey(customerSurvey);//保存调研信息
-        String jsonString = customerSurvey.getJsonString();
-        if(!StringUtil.isEmpty(jsonString)){
-            List<SurveyDetail> surveyDetailList = JsonUtil.getDTOList(jsonString,SurveyDetail.class);
-            for(int i = 0;i<surveyDetailList.size(); i++){
+    //保存调研产品明细
+    private void saveSurveyDetail(String jsonString) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        if (!StringUtil.isEmpty(jsonString)) {
+            List<SurveyDetail> surveyDetailList = JsonUtil.getDTOList(jsonString, SurveyDetail.class);
+            for (int i = 0; i < surveyDetailList.size(); i++) {
                 SurveyDetail surveyDetail = surveyDetailList.get(i);
+                surveyDetail.setCreator(auth.getName());
+                surveyDetail.setOperator(auth.getName());
                 surveyDetailMapper.addSurveyDetail(surveyDetail);//保存调研产品明细
             }
         }
     }
+
+    @Transactional
+    public void addCustomerSurvey (CustomerSurvey customerSurvey) throws DataAccessException {
+        /*CustomerSurvey customerSurvey1 = new CustomerSurvey();
+        customerSurvey1.setSurveyNo(customerSurvey.getSurveyNo());
+        int size = customerSurveyMapper.countSurveySize(customerSurvey1);
+        if(size>0){ //数据库已经存在，重新获取
+            String surveyNo = this.getSurveyNo();
+            customerSurvey.setSurveyNo(surveyNo);
+        }*/
+        customerSurveyMapper.addCustomerSurvey(customerSurvey);//保存调研信息
+        this.saveSurveyDetail(customerSurvey.getJsonString());
+    }
+
+
 
     //获取该年 最大调研编号
     public String getSurveyNo() {
@@ -84,7 +102,7 @@ public class CustomerSurveyService {
         }
         Calendar cal = Calendar.getInstance();
         int year = cal.get(Calendar.YEAR);
-        return "VES"+year+surveyNo;
+        return "VES" + year + surveyNo;
     }
 
 }

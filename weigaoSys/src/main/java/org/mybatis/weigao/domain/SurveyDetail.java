@@ -1,5 +1,7 @@
 package org.mybatis.weigao.domain;
 
+import org.apache.log4j.Logger;
+
 import java.io.Serializable;
 
 /**
@@ -10,6 +12,7 @@ import java.io.Serializable;
  * To change this template use File | Settings | File Templates.
  */
 public class SurveyDetail implements Serializable {
+    private static Logger logger = Logger.getLogger(SurveyDetail.class);
     private static final long serialVersionUID = 1L;
     private boolean select;
     private boolean disable;
@@ -181,6 +184,14 @@ public class SurveyDetail implements Serializable {
     }
 
     public String getbInstallDate() {
+        if (bInstallDate == null || "".equals(bInstallDate)) {
+            return bInstallDate;
+        }
+        try {
+            bInstallDate = bInstallDate.substring(0, 10);
+        } catch (Exception e) {
+            logger.error("bInstallDate："+bInstallDate+"  |bInstallDate，解析错误：" + e);
+        }
         return bInstallDate;
     }
 

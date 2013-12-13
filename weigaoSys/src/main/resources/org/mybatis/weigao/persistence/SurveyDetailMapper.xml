@@ -7,7 +7,7 @@
     <cache/>
 
     <select id="getSurveyDetail" parameterType="int" resultType="SurveyDetail">
-        SELECT     B.UID,PN4.Category, PN3.Brand, PN2.Family, PN1.PartNo,
+        SELECT     B.UID,PN4.Category, PN3.Brand, PN2.Family, PN1.PartNo,B.PartID,
       PN1.Unit, B.AHSCA, B.APrice, b.BReUseNote,b.BInstallDate,b.Remark
         FROM         dbo.oSurvey AS A INNER JOIN
                               dbo.oSurveyDtl AS B ON A.UID = B.SurveyID LEFT OUTER JOIN
@@ -30,6 +30,11 @@
         WHERE UID =  #{uid}
     </update>
 
+    <delete id="delAllDetailBySurveyNo" parameterType="string">
+        delete from dbo.oSurveyDtl
+        WHERE SurveyID in (select UID from oSurvey where surveyNo = #{surveyNo})
+    </delete>
+
 
     <insert id="addSurveyDetail" parameterType="SurveyDetail">
         INSERT INTO [WEGO].[dbo].[oSurveyDtl]
@@ -51,9 +56,9 @@
              #{select},
              #{disable},
              #{creator},
-             #{creationDate},
+             getDate(),
              #{operator},
-             #{operDate},
+             getDate(),
              (select UID from oSurvey where surveyNo = #{surveyNo}),
               #{partID},
              #{ahsca},

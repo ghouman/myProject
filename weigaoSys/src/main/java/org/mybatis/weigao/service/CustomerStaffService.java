@@ -19,4 +19,12 @@ public class CustomerStaffService {
         return customerStaffMapper.getCustomerStaff(customerStaff);
   }
 
+    public void delAllStaffByCustomerId(int customerId) {
+        customerStaffMapper.delAllStaffByCustomerId(customerId);
+    }
+
+    public void addCustomerStaff(CustomerStaff customerStaff){
+        customerStaffMapper.addCustomerStaff(customerStaff);
+    }
+
 }

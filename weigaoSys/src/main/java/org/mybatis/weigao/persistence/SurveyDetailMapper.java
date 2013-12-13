@@ -18,5 +18,7 @@ public interface SurveyDetailMapper {
 
     public void addSurveyDetail(SurveyDetail surveyDetail);
 
+    public void delAllDetailBySurveyNo(String surveyNo);
+
     public List<SurveyDetail> getSurveyDetail(int uid);
 }

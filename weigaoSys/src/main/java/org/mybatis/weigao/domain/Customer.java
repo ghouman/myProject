@@ -33,6 +33,7 @@ public class Customer implements Serializable {
     private String portID;//  所在城市ID：FK，关联城市表b0Port.UID
     private String port;
     private String clerk;// 业务员
+    private String manager;
     private String salesRegion;//  销售大区
     private String labOffice;
     private String labOMemo;
@@ -45,8 +46,73 @@ public class Customer implements Serializable {
     private String verify;
     private String verifier;
     private String verifyDate;
-    private String province ;
+    private String province;
+    private String salesFloor;
 
+    private int fromIndex = 0;
+    private int toIndex = 15;
+
+    private String managerEng; //客服部
+
+    private String preparerManager;//区域主管
+
+    private String jsonString;
+
+    public String getPreparerManager() {
+        return preparerManager;
+    }
+
+    public void setPreparerManager(String preparerManager) {
+        this.preparerManager = preparerManager;
+    }
+
+    public String getSalesFloor() {
+        return salesFloor;
+    }
+
+    public void setSalesFloor(String salesFloor) {
+        this.salesFloor = salesFloor;
+    }
+
+    public String getJsonString() {
+        return jsonString;
+    }
+
+    public void setJsonString(String jsonString) {
+        this.jsonString = jsonString;
+    }
+
+    public String getManagerEng() {
+        return managerEng;
+    }
+
+    public void setManagerEng(String managerEng) {
+        this.managerEng = managerEng;
+    }
+
+    public String getManager() {
+        return manager;
+    }
+
+    public void setManager(String manager) {
+        this.manager = manager;
+    }
+
+    public int getFromIndex() {
+        return fromIndex;
+    }
+
+    public void setFromIndex(int fromIndex) {
+        this.fromIndex = fromIndex;
+    }
+
+    public int getToIndex() {
+        return toIndex;
+    }
+
+    public void setToIndex(int toIndex) {
+        this.toIndex = toIndex;
+    }
 
     public int getUid() {
         return uid;

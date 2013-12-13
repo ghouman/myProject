@@ -6,25 +6,21 @@
 
     <cache/>
 
-    <select id="getCustomerSurvey" parameterType="CustomerSurvey" resultType="CustomerSurvey">
-        SELECT
-        A.UID,A.SurveyNo,
-        case A.IsCheck when 0 then '否' when 1 then '是' end as checked,
-        case A.IsSubmit when 0 then '否' when 1 then '是' end as submit,
-        case A.IsVerify when 0 then '否' when 1 then '是' end as verify,
-        A.Preparer, A.SurveyDate, CUST.CUSTOMER,A.CustomerID, CUST.ZECT, P1.Port, P2.Province, CUST.Clerk,
-        CUST.SalesRegion,
-        LabOffice,LabTel,Doctor,Nurse,Engineer,A.HospitalMemo,
-        HDF_Machine as hdfMachine,HDF_Capacity as hdfCapacity, WaterTreatment
-        ,HospitalSurgical,
-        RenalClinic,HD ,HF, HDF, CRRT, HP, ChannelDYMO ,ChannelDevice ,IsProduct ,ProductPeriod,
-        IsPlan,PlanDialys, HDF__F1 as hdfF1,NEPD_F1 as nepdF1,HDF__F2 as hdfF2,NEPD_F2 as nepdF2,
-        HDF__F3 as hdfF3 ,NEPD_F3 as nepdF3,A.Feedback ,FB_Note as fbNote
-        FROM dbo.oSurvey AS A LEFT OUTER JOIN
+    <select id="countSurveySize" parameterType="CustomerSurvey" resultType="int">
+        select count(*) FROM dbo.oSurvey AS A LEFT OUTER JOIN
         dbo.bCUSTOMER AS CUST ON A.CustomerID = CUST.UID LEFT OUTER JOIN
         dbo.b0Port AS P1 ON CUST.PortID = P1.UID LEFT OUTER JOIN
         dbo.b0Province AS P2 ON P1.ProvinceID = P2.UID
         where 1=1
+        <if test="province != null">
+            and P2.Province like '%'+#{province}+'%'
+        </if>
+        <if test="port != null">
+            and P1.Port like '%'+#{port}+'%'
+        </if>
+        <if test="salesRegion != null">
+            and CUST.SalesRegion like '%'+#{salesRegion}+'%'
+        </if>
         <if test="customer != null">
             and CUST.CUSTOMER like '%'+#{customer}+'%'
         </if>
@@ -49,20 +45,155 @@
         <if test="surveyDate != null">
             and A.SurveyDate = #{surveyDate}
         </if>
+        <if test="manager !=null">
+            and A.Preparer in ( SELECT [Clerk]
+            from [K3_Salesman] a where (select top 1 manager from SalesRegion where a.SRegion = Region)= #{manager})
+        </if>
+        <if test="managerEng !=null">
+            and A.preparer in (SELECT [Clerk]
+            from [K3_Salesman] a where SRegion in (select SalesRegion from b2EngineerComplaint where Engineer=
+            #{managerEng}))
+        </if>
+        <if test="preparerManager !=null">
+            and A.preparer in (select sales from b2SalesFloor where FLOOR = #{preparerManager})
+        </if>
+    </select>
+
+    <!--
+    <select id="getCustomerSurveySP"  parameterType="Map"  resultMap="count,orders" >
+      {call Page_Up_Get_OrderState(#{id,mode=IN,jdbcType=VARCHAR})}
+       DECLARE	@return_value int
+
+       EXEC	@return_value = [dbo].[spPagination]
+       		@Tables = N'vSurvey',
+       		@PrimaryKey = N'surveyNo',
+       		@Sort = N'surveyNo',
+       		@CurrentPage = 1,
+       		@PageSize = 30,
+       		@Filter = null,
+       		@Group = null
+
+        select * from (select ROW_NUMBER() OVER(ORDER BY uid desc) as rownum , * from vSurvey) as t
+        where rownum>(#{rowNum}*#{pageNum}-#{rowNum})  and rowNum <=(#{rowNum}*#{pageNum})
+        <if test="customer != null">
+                    and t.CUSTOMER like '%'+#{customer}+'%'
+                </if>
+                <if test="uid != 0">
+                    and t.uid = #{uid}
+                </if>
+                <if test="surveyNo != null">
+                    and t.SurveyNo like '%'+#{surveyNo}+'%'
+                </if>
+                <if test="preparer != null">
+                    and t.preparer like '%'+#{preparer}+'%'
+                </if>
+                <if test="checked != null">
+                    and t.IsCheck = #{checked}
+                </if>
+                <if test="submit != null">
+                    and t.IsSubmit = #{submit}
+                </if>
+                <if test="verify != null">
+                    and t.IsVerify = #{verify}
+                </if>
+                <if test="surveyDate != null">
+                    and t.SurveyDate = #{surveyDate}
+                </if>
+    </select>
+        -->
+
+    <select id="getCustomerSurvey" parameterType="CustomerSurvey" resultType="CustomerSurvey">
+        select * from (
+        SELECT ROW_NUMBER() OVER(ORDER BY A.uid desc) as rowNum ,
+        A.UID,A.SurveyNo,A.submitMemo,A.verifyMemo,
+        case A.IsCheck when 0 then '否' when 1 then '是' end as checked,
+        case A.IsSubmit when 0 then '否' when 1 then '是' end as submit,
+        case A.IsVerify when 0 then '否' when 1 then '是' end as verify,
+        A.Preparer, A.SurveyDate,CUST.Coop_Type as coopType,CUST.custVal,
+        CUST.CUSTOMER,A.CustomerID, CUST.ZECT, P1.Port, P2.Province, CUST.Clerk,CUST.postalCode,
+        CUST.SalesRegion, CUST.address,CUST.website, CUST.healthClass,CUST.hierarchy,CUST.coop_DT,
+        LabOffice,LabTel,Doctor,Nurse,Engineer,A.HospitalMemo,
+        HDF_Machine as hdfMachine,HDF_Capacity as hdfCapacity, WaterTreatment
+        ,HospitalSurgical,A.IsProduct as ynProduct,A.IsPlan as ynPlan,
+        RenalClinic,HD ,HF, HDF, CRRT, HP, ChannelDYMO ,ChannelDevice ,IsProduct ,ProductPeriod,
+        IsPlan,PlanDialys, HDF__F1 as hdfF1,NEPD_F1 as nepdF1,HDF__F2 as hdfF2,NEPD_F2 as nepdF2,
+        HDF__F3 as hdfF3 ,NEPD_F3 as nepdF3,A.Feedback ,FB_Note as fbNote
+        FROM dbo.oSurvey AS A LEFT OUTER JOIN
+        dbo.bCUSTOMER AS CUST ON A.CustomerID = CUST.UID LEFT OUTER JOIN
+        dbo.b0Port AS P1 ON CUST.PortID = P1.UID LEFT OUTER JOIN
+        dbo.b0Province AS P2 ON P1.ProvinceID = P2.UID
+        where 1=1
+        <if test="province != null">
+            and P2.Province like '%'+#{province}+'%'
+        </if>
+        <if test="port != null">
+            and P1.Port like '%'+#{port}+'%'
+        </if>
+        <if test="salesRegion != null">
+            and CUST.SalesRegion like '%'+#{salesRegion}+'%'
+        </if>
+        <if test="customer != null">
+            and CUST.CUSTOMER like '%'+#{customer}+'%'
+        </if>
+        <if test="uid != 0">
+            and A.uid = #{uid}
+        </if>
+        <if test="surveyNo != null">
+            and A.SurveyNo like '%'+#{surveyNo}+'%'
+        </if>
+        <if test="preparer != null">
+            and A.preparer like '%'+#{preparer}+'%'
+        </if>
+        <if test="checked != null">
+            and A.IsCheck = #{checked}
+        </if>
+        <if test="submit != null">
+            and A.IsSubmit = #{submit}
+        </if>
+        <if test="verify != null">
+            and A.IsVerify = #{verify}
+        </if>
+        <if test="surveyDate != null">
+            and A.SurveyDate = #{surveyDate}
+        </if>
+        <if test="manager !=null">
+            and A.Preparer in ( SELECT [Clerk]
+            from [K3_Salesman] a where (select top 1 manager from SalesRegion where a.SRegion = Region)= #{manager})
+        </if>
+        <if test="managerEng !=null">
+            and A.preparer in (SELECT [Clerk]
+            from [K3_Salesman] a where SRegion in (select SalesRegion from b2EngineerComplaint where Engineer=
+            #{managerEng}))
+        </if>
+        <if test="preparerManager !=null">
+            and A.preparer in (select sales from b2SalesFloor where FLOOR = #{preparerManager})
+        </if>
+        ) as t
+        where  <![CDATA[rowNum>#{fromIndex} and rowNum<= #{toIndex}]]>
 
     </select>
 
     <update id="updateCustomerSurveyStatus" parameterType="CustomerSurvey">
         UPDATE dbo.oSurvey
         SET
+
         <if test="checked != null">
-            IsCheck = #{checked}
+            IsCheck = #{checked}, Checker = #{checker} ,CheckDate = getdate(),OperDate = getdate(),Operator =
+            #{operator}
         </if>
         <if test="submit != null">
-            IsSubmit = #{submit}
+            IsSubmit = #{submit} , SubmitUser = #{submitUser},SubmitDate = getdate() , SubmitMemo =
+            #{submitMemo},OperDate = getdate(),Operator = #{operator}
         </if>
         <if test="verify != null">
-            IsVerify = #{verify}
+            IsVerify = #{verify} , verifier = #{verifier},VerifyDate = getdate(), VerifyMemo = #{verifyMemo},OperDate =
+            getdate(),Operator = #{operator}
+        </if>
+        <if test="returnCheck != null">
+            IsCheck = 0, IsSubmit = 0, IsVerify = 0, Checker = NULL, CheckDate = NULL,
+            verifier = #{verifier},VerifyDate = getdate(), VerifyMemo = #{verifyMemo},
+            SubmitUser = #{submitUser},SubmitDate = getdate() , SubmitMemo = #{submitMemo},OperDate = getdate(),Operator
+            = #{operator}
         </if>
         WHERE UID = #{uid}
     </update>
@@ -73,9 +204,8 @@
               Creator = #{creator},
               CreationDate = #{creationDate},
               Operator = #{operator},
-              OperDate = #{operDate},
+              OperDate = getdate(),
               SurveyDate = #{surveyDate},
-              Preparer = #{preparer},
               PreparerDate = #{preparerDate} ,
               Checker = #{checker},
               CheckDate = #{checkDate} ,
@@ -94,8 +224,8 @@
               WaterTreatment = #{waterTreatment},
               HospitalSurgical = #{hospitalSurgical},
               RenalClinic = #{renalClinic},
-              HD = 0,
-              HF = 0,
+              HD = #{hd},
+              HF = #{hf},
               HDF = #{hdf},
               CRRT = #{crrt},
               HP = #{hp},
@@ -116,7 +246,7 @@
            WHERE SurveyNo = #{surveyNo}
        </update>
 
-       <insert id="addCustomerSurvey" parameterType="CustomerSurvey">
+    <insert id="addCustomerSurvey" parameterType="CustomerSurvey">
            INSERT INTO [WEGO].[dbo].[oSurvey]
            ([IsSelect]
            ,[IsDisable]
@@ -173,7 +303,7 @@
            (#{select} ,
            #{disable} ,
            #{creator} ,
-           #{creationDate},
+           getdate(),
            #{operator},
            #{operDate},
            #{surveyNo},
@@ -224,8 +354,7 @@
        </insert>
 
 
-
-    <select id="getSurveyNo"  resultType="string">
+    <select id="getSurveyNo" resultType="string">
                     select top 1 Substring(SurveyNo,8,Len(SurveyNo)) from oSurvey where
             Substring(SurveyNo,4,4)= Datename(year,GetDate()) order by SurveyNo desc
             </select>

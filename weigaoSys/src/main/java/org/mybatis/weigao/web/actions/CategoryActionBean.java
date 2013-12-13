@@ -50,7 +50,7 @@ public class CategoryActionBean extends AbstractActionBean {
         this.category = category;
     }
 
-    @DefaultHandler
+
     public ForwardResolution goCustomerStaff() {
 
         return new ForwardResolution("");

@@ -16,4 +16,6 @@ public interface CustomerMapper {
     public List<Customer> getCustomer(Customer customer);
 
     public void updateCustomer(Customer customer);
+
+    public int countCustomerSize(Customer customer);
 }

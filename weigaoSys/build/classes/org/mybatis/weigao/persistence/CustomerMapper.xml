@@ -6,8 +6,51 @@
 
     <cache/>
 
+    <select id="countCustomerSize" parameterType="Customer" resultType="int">
+        select count(*)
+        FROM [WEGO].[dbo].[bCUSTOMER] AS CUST LEFT OUTER JOIN
+        dbo.b0Port AS P1 ON CUST.PortID = P1.UID LEFT OUTER JOIN
+        dbo.b0Province AS P2 ON P1.ProvinceID = P2.UID
+        WHERE 1=1
+        <if test="customerName != null">
+            AND CUST.CUSTOMER like '%'+#{customerName}+'%'
+        </if>
+        <if test="salesRegion != null">
+            AND CUST.salesRegion like '%'+#{salesRegion}+'%'
+        </if>
+        <if test="clerk != null">
+            AND CUST.clerk like '%'+#{clerk}+'%'
+        </if>
+        <if test="province != null">
+                    AND P2.Province like '%'+#{province}+'%'
+                </if>
+        <if test="port != null">
+            AND port like '%'+#{port}+'%'
+        </if>
+        <if test="portID != null">
+                    AND portID like '%'+#{portID}+'%'
+                </if>
+        <if test="uid != null and uid != 0 ">
+            AND CUST.uid =#{uid}
+        </if>
+        <if test="manager !=null">
+            and CUST.clerk in ( SELECT [Clerk]
+            from [K3_Salesman] a where (select top 1 manager from SalesRegion where a.SRegion = Region)= #{manager})
+        </if>
+        <if test="managerEng !=null">
+            and CUST.clerk in (SELECT [Clerk]
+            from [K3_Salesman] a where SRegion in (select SalesRegion from b2EngineerComplaint where
+            Engineer=#{managerEng}))
+        </if>
+        <if test="preparerManager !=null">
+            and CUST.clerk in (select sales from b2SalesFloor where FLOOR = #{preparerManager})
+        </if>
+    </select>
+
     <select id="getCustomer" parameterType="Customer" resultType="Customer">
-        SELECT CUST.uid
+        select * from (
+        SELECT ROW_NUMBER() OVER(ORDER BY CUST.uid desc) as rowNum ,
+        CUST.uid
         ,CUST.IsSelect
         ,CUST.IsDisable
         ,CUST.Creator
@@ -29,6 +72,7 @@
         ,CUST.PortID
         ,CUST.Clerk
         ,CUST.SalesRegion
+        ,(SELECT top 1 Manager FROM SalesRegion WHERE Region = CUST.SalesRegion) as Manager
         ,CUST.LabOffice
         ,CUST.LabOMemo
         ,CUST.LabTEL
@@ -37,9 +81,10 @@
         ,CUST.IsActive
         ,CUST.IsDirect
         ,CUST.ChargeLimit
-        ,CUST.IsVerify
+        ,case CUST.IsVerify when 0 then '否' when 1 then '是' end as verify
         ,CUST.Verifier
         ,CUST.VerifyDate
+        ,CUST.salesFloor
         ,P1.Port, P1.ProvinceID, P2.Province
         FROM [WEGO].[dbo].[bCUSTOMER] AS CUST LEFT OUTER JOIN
         dbo.b0Port AS P1 ON CUST.PortID = P1.UID LEFT OUTER JOIN
@@ -54,12 +99,34 @@
         <if test="clerk != null">
             AND CUST.clerk like '%'+#{clerk}+'%'
         </if>
+        <if test="province != null">
+            AND P2.Province like '%'+#{province}+'%'
+        </if>
         <if test="port != null">
             AND port like '%'+#{port}+'%'
         </if>
-        <if test="uid != 0">
-                    AND CUST.uid =#{uid}
-                </if>
+        <if test="portID != null">
+                           AND portID like '%'+#{portID}+'%'
+                       </if>
+        <if test="uid != null and uid != 0 ">
+            AND CUST.uid =#{uid}
+        </if>
+        <if test="manager !=null">
+            and CUST.clerk in ( SELECT [Clerk]
+            from [K3_Salesman] a where (select top 1 manager from SalesRegion where a.SRegion = Region)= #{manager})
+        </if>
+        <if test="managerEng !=null">
+            and CUST.clerk in (SELECT [Clerk]
+            from [K3_Salesman] a where SRegion in (select SalesRegion from b2EngineerComplaint where
+            Engineer=#{managerEng}))
+        </if>
+        <if test="preparerManager !=null">
+            and CUST.clerk in (select sales from b2SalesFloor where FLOOR = #{preparerManager})
+        </if>
+        ) as t
+        where  <![CDATA[rowNum>#{fromIndex} and rowNum<= #{toIndex}]]>
+        order by t.Port,t.customerName
+
     </select>
 
     <update id="updateCustomer" parameterType="Customer">
@@ -68,7 +135,7 @@
                   Creator = #{creator},
                   CreationDate = #{creationDate},
                   Operator = #{operator},
-                  OperDate = #{operDate},
+                  OperDate = getdate(),
                   Customer = #{customerName},
                   ZECT = #{zect},
                   Coop_Type = #{coopType},
@@ -82,8 +149,6 @@
                   Open_DT =  #{openDt} ,
                   Coop_DT = #{coop_DT} ,
                   PortID = #{portID},
-                  Clerk = #{clerk},
-                  SalesRegion = #{salesRegion},
                   LabOffice = #{labOffice},
                   LabOMemo =  #{labOMemo},
                   LabTEL = #{labTEL},

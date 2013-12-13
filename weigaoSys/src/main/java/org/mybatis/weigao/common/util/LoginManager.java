@@ -86,8 +86,8 @@ public abstract class LoginManager {
 
 
     public static boolean isUserLogin(HttpServletRequest request) {
-        HttpSession sessoin = request.getSession();
-        Object objUser = sessoin.getAttribute("user_info");
+        HttpSession session = request.getSession();
+        Object objUser = session.getAttribute("user_info");
         if (objUser != null) {
             SysUser user = (SysUser) objUser;
             if (user != null) {

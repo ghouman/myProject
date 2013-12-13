@@ -26,6 +26,24 @@ public class CustomerStaff  implements Serializable {
     private String staffForce;
     private String staffFavor;
     private String staffImpact;
+    private String staffBirth;
+    private String  staffAge;
+
+    public String getStaffAge() {
+        return staffAge;
+    }
+
+    public void setStaffAge(String staffAge) {
+        this.staffAge = staffAge;
+    }
+
+    public String getStaffBirth() {
+        return staffBirth;
+    }
+
+    public void setStaffBirth(String staffBirth) {
+        this.staffBirth = staffBirth;
+    }
 
     public int getUid() {
         return uid;

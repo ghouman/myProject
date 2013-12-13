@@ -31,5 +31,44 @@
 
     </select>
 
+    <delete id="delAllStaffByCustomerId" parameterType="int">
+            delete from bCUSTOMERStaff
+            WHERE CustomerId = #{CustomerId}
+        </delete>
 
+
+        <insert id="addCustomerStaff" parameterType="SurveyDetail">
+            INSERT INTO [WEGO].[dbo].[bCUSTOMERStaff]
+                       ([IsSelect]
+                       ,[IsDisable]
+                       ,[Creator]
+                       ,[CreationDate]
+                       ,[Operator]
+                       ,[OperDate]
+                       ,[CustomerID]
+                       ,[Staff]
+                       ,[StaffDuty]
+                       ,[StaffTel]
+                       ,[StaffForce]
+                       ,[StaffFavor]
+                       ,[StaffImpact]
+                       ,[StaffAge]
+                       ,[StaffBirth])
+                 VALUES
+                       (0
+                       ,0
+                       ,#{creator}
+                       ,getdate()
+                       ,#{operator}
+                       ,getdate()
+                       ,#{customerId}
+                       ,#{staff}
+                       ,#{staffDuty}
+                       ,#{staffTel}
+                       ,#{staffForce}
+                       ,#{staffFavor}
+                       ,#{staffImpact}
+                       ,#{staffAge}
+                       ,#{staffBirth})
+        </insert>
 </mapper>

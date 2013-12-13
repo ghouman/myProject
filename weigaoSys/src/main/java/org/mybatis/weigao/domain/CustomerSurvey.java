@@ -1,5 +1,7 @@
 package org.mybatis.weigao.domain;
 
+import org.apache.log4j.Logger;
+
 import java.io.Serializable;
 
 /**
@@ -10,6 +12,8 @@ import java.io.Serializable;
  * To change this template use File | Settings | File Templates.
  */
 public class CustomerSurvey implements Serializable {
+
+    private static Logger logger = Logger.getLogger (CustomerSurvey.class);
     private static final long serialVersionUID = 1L;
     private int id;
     private int uid;
@@ -76,7 +80,141 @@ public class CustomerSurvey implements Serializable {
     private String labTel;
     private String customerName;
 
+    private String coopType;
+    private String address;
+    private String website;
+    private String healthClass;
+    private String hierarchy;
+    private String coop_DT;
+    private String postalCode;
+    private String custVal;
+
+    private int fromIndex = 0;
+    private int toIndex = 15;
+
+    private String manager; //大区经理
+
+    private String managerEng; //客服部
+
+    private String preparerManager;//区域主管
+
+    private String submitMemo;
+    private String verifyMemo;
+    private String returnCheck;
+
+    public String getPreparerManager() {
+        return preparerManager;
+    }
+
+    public void setPreparerManager(String preparerManager) {
+        this.preparerManager = preparerManager;
+    }
+
+    public String getCustVal() {
+        return custVal;
+    }
+
+    public void setCustVal(String custVal) {
+        this.custVal = custVal;
+    }
+
+    public String getCoopType() {
+        return coopType;
+    }
+
+    public void setCoopType(String coopType) {
+        this.coopType = coopType;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getWebsite() {
+        return website;
+    }
+
+    public void setWebsite(String website) {
+        this.website = website;
+    }
+
+    public String getHealthClass() {
+        return healthClass;
+    }
+
+    public void setHealthClass(String healthClass) {
+        this.healthClass = healthClass;
+    }
+
+    public String getHierarchy() {
+        return hierarchy;
+    }
+
+    public void setHierarchy(String hierarchy) {
+        this.hierarchy = hierarchy;
+    }
+
+    public String getCoop_DT() {
+        return coop_DT;
+    }
+
+    public void setCoop_DT(String coop_DT) {
+        this.coop_DT = coop_DT;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public String getReturnCheck() {
+        return returnCheck;
+    }
+
+    public void setReturnCheck(String returnCheck) {
+        this.returnCheck = returnCheck;
+    }
+
+    public String getSubmitMemo() {
+        return submitMemo;
+    }
+
+    public void setSubmitMemo(String submitMemo) {
+        this.submitMemo = submitMemo;
+    }
+
+    public String getVerifyMemo() {
+        return verifyMemo;
+    }
+
+    public void setVerifyMemo(String verifyMemo) {
+        this.verifyMemo = verifyMemo;
+    }
+
     private String jsonString;
+
+    public String getManagerEng() {
+        return managerEng;
+    }
+
+    public void setManagerEng(String managerEng) {
+        this.managerEng = managerEng;
+    }
+
+    public String getManager() {
+        return manager;
+    }
+
+    public void setManager(String manager) {
+        this.manager = manager;
+    }
 
     public String getJsonString() {
         return jsonString;
@@ -84,6 +222,22 @@ public class CustomerSurvey implements Serializable {
 
     public void setJsonString(String jsonString) {
         this.jsonString = jsonString;
+    }
+
+    public int getFromIndex() {
+        return fromIndex;
+    }
+
+    public void setFromIndex(int fromIndex) {
+        this.fromIndex = fromIndex;
+    }
+
+    public int getToIndex() {
+        return toIndex;
+    }
+
+    public void setToIndex(int toIndex) {
+        this.toIndex = toIndex;
     }
 
     public String getCustomerName() {
@@ -167,7 +321,15 @@ public class CustomerSurvey implements Serializable {
     }
 
     public String getSurveyDate() {
-        return surveyDate;
+        if(surveyDate==null||"".equals(surveyDate)){
+            return surveyDate;
+        }
+        try{
+            surveyDate = surveyDate.substring(0,10);
+        }   catch (Exception e){
+            logger.error("surveyDate:"+surveyDate+"   |surveyDate格式有误，解析错误："+e);
+        }
+        return  surveyDate;
     }
 
     public void setSurveyDate(String surveyDate) {

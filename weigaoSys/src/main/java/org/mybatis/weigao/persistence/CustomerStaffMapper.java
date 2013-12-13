@@ -15,4 +15,7 @@ public interface CustomerStaffMapper {
 
     public List<CustomerStaff> getCustomerStaff(CustomerStaff customerStaff);
 
+    public void delAllStaffByCustomerId(int customerId);
+
+    public void addCustomerStaff(CustomerStaff customerStaff);
 }

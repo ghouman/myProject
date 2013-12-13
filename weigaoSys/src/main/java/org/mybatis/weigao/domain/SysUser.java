@@ -2,6 +2,7 @@ package org.mybatis.weigao.domain;
 
 import java.io.Serializable;
 import java.util.Date;
+
 /**
  * Created with IntelliJ IDEA.
  * User: ghm
@@ -12,85 +13,124 @@ import java.util.Date;
 
 
 public class SysUser
-  implements Serializable
-{
-  private static final long serialVersionUID = -1L;
-  private Long no;
-  private String userId;
-  private String password;
-  private String userName;
-  private String roleWeb;
-  private String depart;
-  private boolean adapted;
-  private String operator;
-  private Date operDate;
-  private String region;
-  private boolean floor = false;
+        implements Serializable {
+    private static final long serialVersionUID = -1L;
+    private Long no;
+    private String userId;
+    private String password;
+    private String userName;
+    private String roleWeb;
+    private String depart;
+    private boolean adapted;
+    private String operator;
+    private Date operDate;
+    private String region;
+    private boolean floor = false;
+    private boolean isResearchAdmin;
+    private boolean isSalesFloor ;
 
-  public boolean isFloor() {
-    return this.floor;
-  }
+    public boolean isSalesFloor() {
+        return isSalesFloor;
+    }
 
-  public void setFloor(boolean floor) { this.floor = floor; }
+    public void setSalesFloor(boolean salesFloor) {
+        isSalesFloor = salesFloor;
+    }
 
-  public String getRegion() {
-    return this.region;
-  }
+    public boolean isResearchAdmin() {
+        return isResearchAdmin;
+    }
 
-  public void setRegion(String region) { this.region = region; }
+    public void setResearchAdmin(boolean researchAdmin) {
+        isResearchAdmin = researchAdmin;
+    }
 
-  public String getRoleWeb() {
-    return this.roleWeb;
-  }
+    public boolean isFloor() {
+        return this.floor;
+    }
 
-  public void setRoleWeb(String roleWeb) { this.roleWeb = roleWeb; }
+    public void setFloor(boolean floor) {
+        this.floor = floor;
+    }
 
-  public Long getNo() {
-    return this.no;
-  }
+    public String getRegion() {
+        return this.region;
+    }
 
-  public void setNo(Long no) { this.no = no; }
+    public void setRegion(String region) {
+        this.region = region;
+    }
 
-  public String getUserId() {
-    return this.userId;
-  }
+    public String getRoleWeb() {
+        return this.roleWeb;
+    }
 
-  public void setUserId(String userId) { this.userId = userId; }
+    public void setRoleWeb(String roleWeb) {
+        this.roleWeb = roleWeb;
+    }
 
-  public String getPassword() {
-    return this.password;
-  }
+    public Long getNo() {
+        return this.no;
+    }
 
-  public void setPassword(String password) { this.password = password; }
+    public void setNo(Long no) {
+        this.no = no;
+    }
 
-  public String getUserName() {
-    return this.userName;
-  }
+    public String getUserId() {
+        return this.userId;
+    }
 
-  public void setUserName(String userName) { this.userName = userName; }
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
 
-  public String getDepart() {
-    return this.depart;
-  }
+    public String getPassword() {
+        return this.password;
+    }
 
-  public void setDepart(String depart) { this.depart = depart; }
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-  public boolean isAdapted() {
-    return this.adapted;
-  }
+    public String getUserName() {
+        return this.userName;
+    }
 
-  public void setAdapted(boolean adapted) { this.adapted = adapted; }
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
-  public String getOperator() {
-    return this.operator;
-  }
+    public String getDepart() {
+        return this.depart;
+    }
 
-  public void setOperator(String operator) { this.operator = operator; }
+    public void setDepart(String depart) {
+        this.depart = depart;
+    }
 
-  public Date getOperDate() {
-    return this.operDate;
-  }
+    public boolean isAdapted() {
+        return this.adapted;
+    }
 
-  public void setOperDate(Date operDate) { this.operDate = operDate; }
+    public void setAdapted(boolean adapted) {
+        this.adapted = adapted;
+    }
+
+    public String getOperator() {
+        return this.operator;
+    }
+
+    public void setOperator(String operator) {
+        this.operator = operator;
+    }
+
+    public Date getOperDate() {
+        return this.operDate;
+    }
+
+    public void setOperDate(Date operDate) {
+        this.operDate = operDate;
+    }
 }
 
