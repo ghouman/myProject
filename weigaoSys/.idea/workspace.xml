@@ -2,501 +2,501 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="67ac6636-79a5-4277-a69d-27fdbe50a019" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/102.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/web/actions/AbstractActionBean.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/domain/Account.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/web/actions/AccountActionBean.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/AccountMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/service/AccountService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/domain/Cart.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/web/actions/CartActionBean.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/domain/CartItem.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/web/actions/CatalogActionBean.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/service/CatalogService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/domain/Category.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/CategoryMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/domain/Item.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/ItemMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/domain/LineItem.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/LineItemMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/META-INF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/META-INF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/work/org/apache/jsp/WEB_002dINF/jsp/catalog/Main_jsp.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/domain/Order.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/web/actions/OrderActionBean.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/OrderMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/service/OrderService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/domain/Product.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/ProductMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/domain/Sequence.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/SequenceMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/work/org/apache/jsp/WEB_002dINF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/account" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/web/actions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/web/actions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap-tree/img/ajax-loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/bootstrap-tree/img/ajax-loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/img/ajax-loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/aopalliance-1.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/work/org/apache" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/arrow_down.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/arrow_off.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/arrow_up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/asm-3.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/banner_birds.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/banner_cats.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/banner_dogs.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/banner_fish.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/banner_reptiles.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/bird1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/bird2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/birds_icon.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap-tree" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/bootstrap-tree" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/images/breadcrumbs.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/browse.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/img/bs-docs-masthead-pattern.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/bs-docs-masthead-pattern.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap-tree/img/bstree-halflings.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/bootstrap-tree/img/bstree-halflings.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/carbon_fibre_big.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/cart.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/cart" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/cat1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/cat2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/catalog" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/work/org/apache/jsp/WEB_002dINF/jsp/catalog" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/cats_icon.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/cglib-2.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/common" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/commons-beanutils-1.7.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/commons-collections-3.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/commons-dbcp.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/commons-lang-2.3.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/commons-logging-1.1.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/commons-pool-1.4.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util/core" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap/css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap-tree/css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/bootstrap-tree/css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/database" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/default" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/displaytag-1.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/displaytag-export-poi-1.2.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/displaytag.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/dog1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/dog2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/dog3.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/dog4.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/dog5.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/dog6.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/dogs.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/dogs_icon.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/domain" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/domain" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util/core/domain" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/ezmorph-1.0.6.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/fish.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/fish1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/fish2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/fish3.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/fish4.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/fish_icon.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/fonts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap/img/glyphicons-halflings-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/img/glyphicons-halflings-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap/img/glyphicons-halflings.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/img/glyphicons-halflings.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/google-code-prettify" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/hsqldb-1.8.0.10.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/ico_file_csv.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/ico_file_excel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/ico_file_pdf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/ico_file_rtf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/ico_file_xml.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/images" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap/img" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap-tree/img" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/img" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/bootstrap-tree/img" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/itext-pdfa-5.4.4.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/itext-xtra-5.4.4.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/itextpdf-5.4.4.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/META-INF/maven/org.mybatis/jpetstore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap/js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap-tree/js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/bootstrap-tree/js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/json-lib-2.4-jdk15.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/work/org/apache/jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/work/org/apache/jsp/WEB_002dINF/jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/jstl-1.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/images/list.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/lizard1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/log4j-1.2.16.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/login-wrap-bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/logo-topbar.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/logo.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/META-INF/maven" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/mybatis-3.0.5.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/mybatis-spring-1.0.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/mybatis" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/mysql-connector-java-5.1.10-bin.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/order" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/META-INF/maven/org.mybatis" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/work/org" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/pages" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/paginazione.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/paginazione_ahead.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/paginazione_back.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/persistence" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/mybatis/weigao/persistence" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/poweredby.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/reptiles_icon.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/security" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/separator.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/service" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/service" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/sm_birds.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/sm_cats.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/sm_dogs.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/sm_fish.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/sm_reptiles.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/snake1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/splash.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-aop-3.0.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-asm-3.0.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-beans-3.0.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-context-3.0.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-core-3.0.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-expression-3.0.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-jdbc-3.0.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-security-acl-3.0.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-security-aspects-3.0.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-security-cas-client-3.0.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-security-config-3.0.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-security-core-3.0.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-security-ldap-3.0.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-security-openid-3.0.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-security-taglibs-3.0.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-security-web-3.0.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-tx-3.0.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-web-3.0.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/sqljdbc4.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/standard-1.0.6.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/stripes-1.5.6.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/valid-xhtml10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/viewsource.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/web" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/web" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/weigao" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/weigao" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/mybatis/weigao" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/work" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.classpath" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings/.jsdtscope" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.project" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tomcatplugin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/403.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/403——bak.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/404.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/web/actions/AbstractActionBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/domain/Account.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/web/actions/AccountActionBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/persistence/AccountMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/AccountMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/mybatis/weigao/persistence/AccountMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/service/AccountService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/cart/Cart.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/web/actions/CatalogActionBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/domain/Category.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/catalog/Category.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/web/actions/CategoryActionBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/persistence/CategoryMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/CategoryMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/mybatis/weigao/persistence/CategoryMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/service/CategoryService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/cart/Checkout.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util/CommonUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/web/actions/ComponentActionBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/persistence/ComponentMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/mybatis/weigao/persistence/ComponentMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/service/ComponentService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/order/ConfirmOrder.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util/core/Constants.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util/CookieUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/domain/Customer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/web/actions/CustomerActionBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/persistence/CustomerMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/mybatis/weigao/persistence/CustomerMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/service/CustomerService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/domain/CustomerStaff.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/web/actions/CustomerStaffActionBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/persistence/CustomerStaffMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/mybatis/weigao/persistence/CustomerStaffMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/service/CustomerStaffService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/domain/CustomerSurvey.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/web/actions/CustomerSurveyActionBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/persistence/CustomerSurveyMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/mybatis/weigao/persistence/CustomerSurveyMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/service/CustomerSurveyService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/account/EditAccountForm.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/Error.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/account/IncludeAccountFields.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/IncludeBottom.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/IncludeBottom_bak.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/cart/IncludeMyList.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/IncludeTop.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/IncludeTop2.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/IncludeTop_bak.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/catalog/Item.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/ItemMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util/JsonDateValueProcessor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util/JsonUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/LineItemMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/order/ListOrders.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/web/actions/LoginActionBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util/LoginManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/catalog/Main.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/Main.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/work/org/apache/jsp/WEB_002dINF/jsp/catalog/Main_jsp.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/security/MyAccessDecisionManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util/core/MyFilterSecurityInterceptor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/security/MyInvocationSecurityMetadataSource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/service/MyUserDetailService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/account/NewAccountForm.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/order/NewOrderForm.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/OrderMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util/core/domain/PaginatedListHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/ProductMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/domain/SalesRegion.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/domain/Salesman.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/web/actions/SalesmanActionBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/persistence/SalesmanMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/mybatis/weigao/persistence/SalesmanMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/service/SalesmanService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/SequenceMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util/SessionUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/order/ShippingForm.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/account/SignonForm.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util/StringUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/StripesResources.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/StripesResources.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/domain/SurveyDetail.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/persistence/SurveyDetailMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/mybatis/weigao/persistence/SurveyDetailMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/domain/SysUser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/persistence/SysUserMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/mybatis/weigao/persistence/SysUserMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/service/SysUserService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util/core/domain/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/domain/VPort.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/web/actions/VPortActionBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/persistence/VPortMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/mybatis/weigao/persistence/VPortMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/service/VPortService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/order/ViewOrder.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/weigao/addCustomerSurvey.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/weigao/addCustomerSurvey.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/css/alternative.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/application.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/META-INF/application.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/applicationContext-security.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/applicationContext.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-affix.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-alert.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-button.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-carousel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-collapse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-datepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-datetimepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-datetimepicker.zh-CN.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-dropdown.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/service" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tomcatplugin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/pages" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/mybatis/weigao/persistence/CustomerStaffMapper.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/bootstrap-modal-bs3patch.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/bootstrap-modal.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-modal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-modalmanager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-popover.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap/css/bootstrap-responsive.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/bootstrap-responsive.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/default/bootstrap-responsive.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap/css/bootstrap-responsive.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/bootstrap-responsive.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/default/bootstrap-responsive.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-scrollspy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-tab.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-tooltip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-transition.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap-tree/css/bootstrap-tree.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/bootstrap-tree/css/bootstrap-tree.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap-tree/js/bootstrap-tree.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/bootstrap-tree/js/bootstrap-tree.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-tree.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-typeahead.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-typeahead_u.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/403——bak.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/cats_icon.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/security/MyInvocationSecurityMetadataSource.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/default/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/default/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/bootstrap_base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/bootstrap_green.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/bootswatch.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootswatch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bsa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/common/common.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/weigao/customerCommon.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/weigao/customerSurveyCommon.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/datepicker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/displaytag-el.tld" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/css/displaytag.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/displaytag.tld" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/css/displaytag_e.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/docs.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/docs.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/docs1.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/duplicateLogin.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/example.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/example.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/help.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/htmlexample.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/htmlexample.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/default/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/index1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/index_bak.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/database/jpetstore-hsqldb-dataload.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/database/jpetstore-hsqldb-schema.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/jpetstore.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/jquery.form.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/jquery.mockjax.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/common/jquery.validate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/common/jquery.validate.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/jsonexample.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/weigao/listCustomer.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/weigao/listCustomerSurvey.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/weigao/listCustomerSurvey.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/weigao/listCustomerSurvey_bak.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/login.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/magicsuggest-1.3.1-min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/common/magicsuggest-1.3.1-min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/magicsuggest-1.3.1.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/common/magicsuggest-1.3.1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/css/maven-base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/css/maven-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/common/messages_zh.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mysql-jdbc.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/nav.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/navSystem.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/noLoginTop.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.ltk.core.refactoring.prefs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.component" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.jsdt.ui.superType.container" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.jsdt.ui.superType.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/META-INF/maven/org.mybatis/jpetstore/pom.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/META-INF/maven/org.mybatis/jpetstore/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/google-code-prettify/prettify.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/google-code-prettify/prettify.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/css/print.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/qunit-1.11.0.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/weigao/redriect.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/sco.valid.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/scojs.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/css/screen.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/sessionTimeout.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/css/site.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/spin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/sqlserver-jdbc.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/pages/systemSet.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/css/teststyles.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/weigao/updateCustomer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/weigao/updateCustomer.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/weigao/updateCustomerSurvey.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/weigao/updateCustomerSurvey.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/default/variables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/weigao/viewCustomer.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/weigao/viewCustomerSurvey.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/weigao/wegoCommon.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weigaoSys.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/weigaoSys_Web_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-web-3.0.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/dogs.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/service/CategoryService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util/core/domain" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/xmlexample.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/sqljdbc4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/poweredby.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/security/MyAccessDecisionManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bsa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap/img/glyphicons-halflings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/ico_file_rtf.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/work/org/apache/jsp/WEB_002dINF/jsp/catalog/Main_jsp.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/jquery.mockjax.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/account/EditAccountForm.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util/LoginManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/mybatis/weigao/persistence" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/Error.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-security-config-3.0.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/web/actions/AccountActionBean.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/catalog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/banner_reptiles.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/StripesResources.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/log4j.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-typeahead.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/bootstrap-theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap/img/glyphicons-halflings-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-dropdown.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/fish2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-security-aspects-3.0.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/cglib-2.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/google-code-prettify/prettify.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/common/magicsuggest-1.3.1-min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/weigao" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/google-code-prettify" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/itext-xtra-5.4.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/web/actions/AbstractActionBean.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/bootstrap-responsive.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/web/actions/CatalogActionBean.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/weigao/viewCustomer.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/jsonexample.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-datepicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/common" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap/css/bootstrap-responsive.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/mybatis/weigao/persistence/CategoryMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/css/screen.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/META-INF/maven/org.mybatis/jpetstore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/valid-xhtml10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/service/CatalogService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-transition.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/bootstrap-tree/css/bootstrap-tree.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/img/ajax-loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/browse.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/img/glyphicons-halflings-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/fonts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/account" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/domain/Category.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/itext-pdfa-5.4.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/catalog/Category.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/web/actions" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap-tree/img" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/service/MyUserDetailService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/weigao/customerSurveyCommon.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/service/SalesmanService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-tree.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/sm_reptiles.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/stripes-1.5.6.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-tx-3.0.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/persistence/SalesmanMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/weigao/updateCustomer.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/order/ConfirmOrder.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/bootstrap-theme.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/bootstrap_green.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/htmlexample.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/css/teststyles.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/docs.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/weigao/listCustomer.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/weigaoSys_Web_exploded.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/displaytag-1.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/service/OrderService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-tab.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/domain/Customer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/domain/Account.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/web/actions" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/css/print.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util/JsonUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-scrollspy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/persistence/CustomerMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/domain/Category.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/work" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/bootstrap-tree/js/bootstrap-tree.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/sm_cats.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/commons-dbcp.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/mybatis/weigao/persistence/SurveyDetailMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util/core/domain/User.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/cart/IncludeMyList.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/magicsuggest-1.3.1-min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/paginazione_ahead.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/LineItemMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/aopalliance-1.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/dog1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.project" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/service/CustomerStaffService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/common/jquery.validate.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/banner_cats.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/default" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/domain/VPort.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/weigao/addCustomerSurvey.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/work/org/apache/jsp/WEB_002dINF/jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/account/NewAccountForm.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/persistence/CategoryMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/commons-collections-3.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/ItemMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/web/actions/CatalogActionBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/domain/Sequence.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/domain/Item.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.ltk.core.refactoring.prefs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/account/IncludeAccountFields.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/work/org/apache/jsp/WEB_002dINF/jsp/catalog/Main_jsp.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/separator.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.component" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/index1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/order/NewOrderForm.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util/CookieUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/jpetstore.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/default/bootstrap-responsive.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/web/actions/AbstractActionBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-modal.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/mybatis/weigao/persistence/VPortMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/viewsource.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/404.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/META-INF/application.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/work/org/apache/jsp/WEB_002dINF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/domain/CartItem.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/LineItemMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/img/bs-docs-masthead-pattern.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-asm-3.0.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/displaytag.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/cart/Checkout.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/bird2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/snake1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/mybatis/weigao/persistence/ComponentMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/ProductMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/mybatis" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/images/breadcrumbs.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/database/jpetstore-hsqldb-schema.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/cat2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/persistence/CustomerStaffMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/bootstrap-tree/css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/META-INF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/login-wrap-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/log4j-1.2.16.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/applicationContext.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/login.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap-tree/js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/css/maven-base.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/order" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/mybatis/weigao" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/standard-1.0.6.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/docs.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-typeahead_u.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/sqlserver-jdbc.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/service/SysUserService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/domain/Account.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/birds_icon.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/fonts/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/css/displaytag.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/scojs.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-security-acl-3.0.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/example.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/IncludeTop_bak.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/weigao/redriect.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/CategoryMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/weigao/listCustomerSurvey.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/domain/CustomerStaff.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/bootstrap-responsive.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/duplicateLogin.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/weigao/viewCustomerSurvey.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/noLoginTop.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-core-3.0.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.classpath" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/domain/Salesman.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/banner_dogs.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/order/ShippingForm.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap-tree" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/domain/Cart.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/nav.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-carousel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap-tree/css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/hsqldb-1.8.0.10.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/service/CustomerService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util/SessionUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/IncludeTop.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/SequenceMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/sm_fish.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/database" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-alert.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/css/alternative.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/catalog/Main.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap-tree/img/ajax-loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/default/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/persistence/SurveyDetailMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/domain/SurveyDetail.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-security-cas-client-3.0.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util/StringUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mysql-jdbc.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util/core" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/arrow_off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/web/actions/ComponentActionBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/commons-pool-1.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/google-code-prettify/prettify.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/spin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/META-INF/maven/org.mybatis/jpetstore/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util/core/domain/PaginatedListHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/sm_birds.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/lizard1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-security-web-3.0.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util/CommonUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/web/actions/AccountActionBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/bootstrap-tree" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/OrderMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/AccountMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/web/actions/CustomerSurveyActionBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/default/bootstrap-responsive.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util/JsonDateValueProcessor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/account/SignonForm.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/docs1.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/sm_dogs.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/cart" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/carbon_fibre_big.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/weigao" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/paginazione_back.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/ItemMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/jstl-1.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/META-INF/maven/org.mybatis" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/arrow_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/persistence/VPortMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap/img" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/domain/Order.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/bootstrap_base.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/css/site.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/fish4.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/fish.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/weigao/listCustomerSurvey.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.jsdt.ui.superType.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/bootstrap-tree/img/bstree-halflings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/dog3.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/domain" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/web/actions/CartActionBean.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/pages/systemSet.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-datetimepicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/work/org/apache/jsp/WEB_002dINF/jsp/catalog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/mybatis/weigao/persistence/SysUserMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-datetimepicker.zh-CN.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/OrderMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/ProductMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/web/actions/SalesmanActionBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/ico_file_xml.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/web.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/Main.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/displaytag-el.tld" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-security-ldap-3.0.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/json-lib-2.4-jdk15.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/web/actions/CustomerStaffActionBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.jsdt.ui.superType.container" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/weigao/updateCustomer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/default/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/service/ComponentService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/ico_file_csv.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util/core/Constants.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/dog5.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/common/common.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/META-INF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/cart.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/service/AccountService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/web/actions/LoginActionBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/persistence/SysUserMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/weigao/updateCustomerSurvey.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weigaoSys.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/default/variables.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/web/actions/CustomerActionBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/work/org" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/META-INF/maven" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/commons-logging-1.1.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-expression-3.0.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/weigao/customerCommon.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/paginazione.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootswatch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/StripesResources.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/dogs_icon.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-jdbc-3.0.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/fish3.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/bs-docs-masthead-pattern.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-button.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/dog2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/service" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/102.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap-tree/img/bstree-halflings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/help.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/web" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/CategoryMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings/.jsdtscope" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/mysql-connector-java-5.1.10-bin.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-context-3.0.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common/util/core/MyFilterSecurityInterceptor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/navSystem.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/common" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/domain/SysUser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/mybatis-3.0.5.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/domain" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/common/magicsuggest-1.3.1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/banner_birds.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/images" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-aop-3.0.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/domain/CustomerSurvey.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/magicsuggest-1.3.1.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/cat1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/403.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/itextpdf-5.4.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/work/org/apache/jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/domain/LineItem.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap-tree/js/bootstrap-tree.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/mybatis-spring-1.0.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/bootstrap-tree/img" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-beans-3.0.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/persistence" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/ezmorph-1.0.6.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/cart/Cart.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/asm-3.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-popover.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/dog4.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-modalmanager.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/persistence/CustomerSurveyMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/css/displaytag_e.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/img" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/css/maven-theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap/js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/order/ViewOrder.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/domain/Product.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/displaytag.tld" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/htmlexample.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/banner_fish.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/application.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/arrow_up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/security" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/domain/SalesRegion.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/persistence/ComponentMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/logo-topbar.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/index_bak.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/mybatis/weigao/persistence/CustomerMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/bootstrap-tree/img/ajax-loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-collapse.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/weigao/listCustomerSurvey_bak.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/weigao/wegoCommon.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-affix.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/ico_file_pdf.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap-tree/css/bootstrap-tree.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/fish_icon.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/sessionTimeout.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/web/actions/VPortActionBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/IncludeBottom_bak.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/catalog/Item.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/jquery.form.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/common/messages_zh.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/persistence/AccountMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-security-core-3.0.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/IncludeBottom.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/img/glyphicons-halflings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/bootstrap-tree/js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/reptiles_icon.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/bootstrap-modal.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/weigao/addCustomerSurvey.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/AccountMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/datepicker.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/images/list.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-security-openid-3.0.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/order/ListOrders.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/mybatis/weigao/persistence/CustomerSurveyMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap/css/bootstrap-responsive.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap-tooltip.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/fish1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/index.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/logo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/dog6.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/bootswatch.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/META-INF/maven/org.mybatis/jpetstore/pom.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/sco.valid.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/work/org/apache" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/example.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/qunit-1.11.0.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/persistence/SequenceMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-security-taglibs-3.0.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/database/jpetstore-hsqldb-dataload.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/service/VPortService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/bird1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/web" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap/css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/commons-beanutils-1.7.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/weigao/updateCustomerSurvey.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/web/actions/OrderActionBean.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/bootstrap/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/mybatis/weigao/persistence/AccountMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/splash.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/IncludeTop2.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/web/actions/CategoryActionBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/commons-lang-2.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/org/mybatis/jpetstore/service/AccountService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/displayTag/img/ico_file_excel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/Bootstrap-Tree-master/bootstrap/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/mybatis/weigao/service/CustomerSurveyService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/displaytag-export-poi-1.2.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/mybatis/weigao/persistence/SalesmanMapper.xml" />
     </list>
     <ignored path="weigaoSys.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -547,7 +547,7 @@
     <file path="/listCustomer.js" changelist="67ac6636-79a5-4277-a69d-27fdbe50a019" time="1385455270057" ignored="false" />
     <file path="/updateCustomerSurvey.js" changelist="67ac6636-79a5-4277-a69d-27fdbe50a019" time="1385483525182" ignored="false" />
     <file path="/sco.valid.js" changelist="67ac6636-79a5-4277-a69d-27fdbe50a019" time="1385488517909" ignored="false" />
-    <file path="/Dummy.txt" changelist="67ac6636-79a5-4277-a69d-27fdbe50a019" time="1386921069825" ignored="false" />
+    <file path="/Dummy.txt" changelist="67ac6636-79a5-4277-a69d-27fdbe50a019" time="1386924211778" ignored="false" />
     <file path="/log4j.properties" changelist="67ac6636-79a5-4277-a69d-27fdbe50a019" time="1386782361764" ignored="false" />
     <file path="/LoginManager.java" changelist="67ac6636-79a5-4277-a69d-27fdbe50a019" time="1385564327150" ignored="false" />
     <file path="/LoginActionBean.java" changelist="67ac6636-79a5-4277-a69d-27fdbe50a019" time="1385656525363" ignored="false" />
@@ -724,7 +724,7 @@
       <file leaf-file-name="wegoCommon.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebContent/js/weigao/wegoCommon.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="96" selection-start="842" selection-end="842" vertical-scroll-proportion="0.22613803">
+            <state line="25" column="51" selection-start="862" selection-end="862" vertical-scroll-proportion="-0.1392405">
               <folding />
             </state>
           </provider>
@@ -873,7 +873,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1243,6 +1242,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1263,9 +1263,9 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -1467,6 +1467,7 @@
       <method />
     </configuration>
     <configuration default="false" name="tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:88/" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -1478,6 +1479,7 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_weigaoSys" />
+        <option name="HTTP_PORT" value="88" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -1540,12 +1542,12 @@
       </method>
     </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.tomcat" />
-      <item index="1" class="java.lang.String" itemvalue="Application.CustomerSurveyService" />
-      <item index="2" class="java.lang.String" itemvalue="Application.JsonUtil" />
-      <item index="3" class="java.lang.String" itemvalue="Application.CommonUtil" />
-      <item index="4" class="java.lang.String" itemvalue="Application.AccountService" />
-      <item index="5" class="java.lang.String" itemvalue="Application.CustomerSurvey" />
+      <item index="0" class="java.lang.String" itemvalue="Application.CustomerSurveyService" />
+      <item index="1" class="java.lang.String" itemvalue="Application.JsonUtil" />
+      <item index="2" class="java.lang.String" itemvalue="Application.CommonUtil" />
+      <item index="3" class="java.lang.String" itemvalue="Application.AccountService" />
+      <item index="4" class="java.lang.String" itemvalue="Application.CustomerSurvey" />
+      <item index="5" class="java.lang.String" itemvalue="Tomcat Server.tomcat" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -1600,7 +1602,7 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="TodoView" selected-index="0">
+  <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
       <are-packages-shown value="false" />
       <are-modules-shown value="false" />
@@ -1621,10 +1623,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1448" height="878" extended-state="7" />
-    <editor active="true" />
+    <frame x="-4" y="-4" width="1448" height="878" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5435898" sideWeight="0.4969651" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.54246575" sideWeight="0.4969651" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.46837607" order="5" side_tool="false" content_ui="tabs" />
@@ -1635,17 +1637,17 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50256413" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52478635" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52465755" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864675" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2661406" sideWeight="0.33675215" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2661406" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43931624" sideWeight="0.4969697" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17272727" sideWeight="0.6735043" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4920914" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17272727" sideWeight="0.6735043" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1830,7 +1832,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/js/weigao/wegoCommon.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="96" selection-start="842" selection-end="842" vertical-scroll-proportion="0.22613803">
+        <state line="25" column="51" selection-start="862" selection-end="862" vertical-scroll-proportion="-0.1392405">
           <folding />
         </state>
       </provider>
