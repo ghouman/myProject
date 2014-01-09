@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.mybatis.weigao.persistence.VPortMapper">
+
+    <cache/>
+    <!--获取所有省份-->
+    <select id="getProvinceList" resultType="VPort">
+  SELECT ProvinceID,Province
+  FROM vPort group by ProvinceID,Province order by ProvinceID
+    </select>
+    <!--根据省份获取城市-->
+    <select id="getPortByProvinceId" parameterType="VPort" resultType="VPort">
+        SELECT ProvinceID,Province,uid,port
+        FROM vPort
+        where 1=1
+        <if test="provinceId != null">
+            and ProvinceID = #{provinceId}
+        </if>
+        order by uid
+    </select>
+
+</mapper>

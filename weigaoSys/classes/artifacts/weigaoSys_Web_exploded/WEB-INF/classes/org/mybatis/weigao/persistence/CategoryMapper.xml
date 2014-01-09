@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.mybatis.weigao.persistence.CategoryMapper">
+
+    <cache flushInterval="36000000"
+        size="512"/>
+    <!--获取所有产品类别-->
+    <select id="getAllCategory" parameterType="java.lang.String" resultType="Category">
+SELECT  UID
+      ,Plate
+      ,Category
+      ,IsSelect
+      ,IsDisable
+      ,Creator
+      ,CreationDate
+      ,Operator
+      ,OperDate
+  FROM b1Category
+  where plate = #{plate}
+    </select>
+    <!--获取类别品牌-->
+    <select id="getBrandByCategoryId" parameterType="Category" resultType="Category">
+SELECT
+         uid as  brandUid,
+    categoryID,
+    brand,
+    code
+  FROM b1Brand
+  where  categoryID = #{categoryID}
+    </select>
+    <!--获取品牌规格-->
+    <select id="getFamilyByBrandId" parameterType="Category" resultType="Category">
+SELECT
+         uid as  familyUid,
+    brandId,
+    family
+  FROM b1Family
+  where  brandId = #{brandId}
+    </select>
+    <!--获取规格型号-->
+    <select id="getPartNoByFamilyId" parameterType="Category" resultType="Category">
+SELECT
+         uid as  partNoUid,
+    familyId,
+    partNo,
+    unit
+  FROM b1PartNo
+  where  familyId = #{familyId}
+    </select>
+
+</mapper>

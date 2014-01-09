@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.mybatis.weigao.persistence.SurveyDetailMapper">
+
+    <cache flushInterval="36000000"
+            size="512"/>
+
+    <select id="getSurveyDetail" parameterType="int" resultType="SurveyDetail">
+        SELECT     B.UID,PN4.Category, PN3.Brand, PN2.Family, PN1.PartNo,B.PartID,
+      PN1.Unit, B.AHSCA, B.APrice, b.BReUseNote,b.BInstallDate,b.Remark,b.salesAgency
+        FROM         dbo.oSurvey AS A INNER JOIN
+                              dbo.oSurveyDtl AS B ON A.UID = B.SurveyID LEFT OUTER JOIN
+                              dbo.b1PartNo AS PN1 ON B.PartID = PN1.UID LEFT OUTER JOIN
+                              dbo.b1Family AS PN2 ON PN1.FamilyID = PN2.UID LEFT OUTER JOIN
+                              dbo.b1Brand AS PN3 ON PN2.BrandID = PN3.UID LEFT OUTER JOIN
+                              dbo.b1Category AS PN4 ON PN3.CategoryID = PN4.UID
+                              where a.uid= #{surveyUid}
+
+    </select>
+
+    <update id="updateSurveyDetail" parameterType="SurveyDetail">
+        UPDATE dbo.oSurveyDtl
+        SET
+        [AHSCA] = #{ahsca}
+                           ,[APrice]  = #{aPrice}
+                           ,[BReUseNote]    = #{bReUseNote}
+                           ,[BInstallDate]  = #{bInstallDate}
+                           ,[Remark]     = #{remark}
+                           ,salesAgency = #{salesAgency}
+        WHERE UID =  #{uid}
+    </update>
+
+    <delete id="delAllDetailBySurveyNo" parameterType="string">
+        delete from dbo.oSurveyDtl
+        WHERE SurveyID in (select UID from oSurvey where surveyNo = #{surveyNo})
+    </delete>
+
+
+    <insert id="addSurveyDetail" parameterType="SurveyDetail">
+        INSERT INTO [WEGO].[dbo].[oSurveyDtl]
+                   ([IsSelect]
+                   ,[IsDisable]
+                   ,[Creator]
+                   ,[CreationDate]
+                   ,[Operator]
+                   ,[OperDate]
+                   ,[SurveyID]
+                   ,[PartID]
+                   ,[AHSCA]
+                   ,[APrice]
+                   ,[BReUseNote]
+                   ,[BInstallDate]
+                   ,[Remark]
+                   ,[SalesAgency])
+             VALUES
+             (
+             #{select},
+             #{disable},
+             #{creator},
+             getDate(),
+             #{operator},
+             getDate(),
+             (select UID from oSurvey where surveyNo = #{surveyNo}),
+              #{partID},
+             #{ahsca},
+             #{aPrice},
+             #{bReUseNote},
+             #{bInstallDate},
+             #{remark},
+             #{salesAgency}
+             )
+    </insert>
+</mapper>

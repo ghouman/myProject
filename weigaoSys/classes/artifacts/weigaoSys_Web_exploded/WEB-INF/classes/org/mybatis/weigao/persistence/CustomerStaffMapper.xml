@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.mybatis.weigao.persistence.CustomerStaffMapper">
+
+    <cache flushInterval="36000000"
+        size="512"/>
+
+    <select id="getCustomerStaff" parameterType="CustomerStaff" resultType="CustomerStaff">
+        SELECT UID
+              ,IsSelect
+              ,IsDisable
+              ,Creator
+              ,CreationDate
+              ,Operator
+              ,OperDate
+              ,CustomerID
+              ,Staff
+              ,StaffDuty
+              ,StaffTel
+              ,StaffForce
+              ,StaffFavor
+              ,StaffImpact
+              ,StaffAge
+              ,StaffBirth
+          FROM bCUSTOMERStaff
+        WHERE 1=1
+        <if test="customerId != null">
+            AND CustomerID like '%'+#{customerId}+'%'
+        </if>
+
+    </select>
+
+    <delete id="delAllStaffByCustomerId" parameterType="int">
+            delete from bCUSTOMERStaff
+            WHERE CustomerId = #{CustomerId}
+        </delete>
+
+
+        <insert id="addCustomerStaff" parameterType="SurveyDetail">
+            INSERT INTO [WEGO].[dbo].[bCUSTOMERStaff]
+                       ([IsSelect]
+                       ,[IsDisable]
+                       ,[Creator]
+                       ,[CreationDate]
+                       ,[Operator]
+                       ,[OperDate]
+                       ,[CustomerID]
+                       ,[Staff]
+                       ,[StaffDuty]
+                       ,[StaffTel]
+                       ,[StaffForce]
+                       ,[StaffFavor]
+                       ,[StaffImpact]
+                       ,[StaffAge]
+                       ,[StaffBirth])
+                 VALUES
+                       (0
+                       ,0
+                       ,#{creator}
+                       ,getdate()
+                       ,#{operator}
+                       ,getdate()
+                       ,#{customerId}
+                       ,#{staff}
+                       ,#{staffDuty}
+                       ,#{staffTel}
+                       ,#{staffForce}
+                       ,#{staffFavor}
+                       ,#{staffImpact}
+                       ,#{staffAge}
+                       ,#{staffBirth})
+        </insert>
+</mapper>

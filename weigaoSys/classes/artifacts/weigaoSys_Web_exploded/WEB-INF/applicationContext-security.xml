@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/security
+           http://www.springframework.org/schema/security/spring-security-3.0.xsd">
+
+    <http access-denied-page="/WEB-INF/jsp/common/403.jsp" auto-config='true'>
+        <!-- 当访问被拒绝时，会转到403.jsp -->
+        <intercept-url pattern="/login.jsp" filters="none" />
+        <intercept-url pattern="/WEB-INF/jsp/common/404.jsp" filters="none" />
+        <intercept-url pattern="/WEB-INF/jsp/common/Error.jsp" filters="none" />
+        <intercept-url pattern="/js/**" filters="none" />
+        <intercept-url pattern="/bootstrap/**" filters="none" />
+        <intercept-url pattern="/displayTags/**" filters="none" />
+        <intercept-url pattern="/images/**" filters="none" />
+        <intercept-url pattern="/actions/**" access="ROLE_LOGIN_USER"/>
+        <intercept-url pattern="/*.actions/**" access="ROLE_LOGIN_USER"/>
+
+        <form-login login-page="/login.jsp"
+                    authentication-failure-url="/login.jsp?error=true"
+                    default-target-url="/actions/Catalog.action" />
+
+        <logout logout-success-url="/login.jsp" logout-url="/logout" invalidate-session="true"/>
+        <!-- "记住我"功能，采用持久化策略  默认cookie
+        （data-source-ref="dataSource" 将用户的登录信息存放在数据库表中）
+        -->
+        <remember-me />
+
+
+        <http-basic />
+        <!-- 增加一个filter，这点与Acegi是不一样的，不能修改默认的filter了，这个filter位于FILTER_SECURITY_INTERCEPTOR之前 -->
+        <custom-filter before="FILTER_SECURITY_INTERCEPTOR"
+                       ref="myFilter" />
+
+        <!-- session-management是针对session的管理. 这里可以不配置. 如有需求可以配置. -->
+               <!--
+                   id登陆唯一. 后登陆的账号会挤掉第一次登陆的账号 error-if-maximum-exceeded="true" 禁止2次登陆;
+                   session-fixation-protection="none" 防止伪造sessionid攻击.
+                   用户登录成功后会销毁用户当前的session. 创建新的session,并把用户信息复制到新session中.
+               -->
+               <session-management invalid-session-url="/sessionTimeout.jsp" >
+                   <concurrency-control max-sessions="5"/>
+               </session-management>
+        <!-- 检测失效的sessionId,超时时定位到另外一个URL -->
+
+    </http>
+
+    <!-- 一个自定义的filter，必须包含authenticationManager,accessDecisionManager,securityMetadataSource三个属性，
+    我们的所有控制将在这三个类中实现，解释详见具体配置 -->
+    <beans:bean id="myFilter" class="org.mybatis.weigao.common.util.core.MyFilterSecurityInterceptor">
+        <beans:property name="authenticationManager"
+                        ref="authenticationManager" />
+        <beans:property name="accessDecisionManager"
+                        ref="myAccessDecisionManagerBean" />
+        <beans:property name="securityMetadataSource"
+                        ref="securityMetadataSource" />
+    </beans:bean>
+
+    <!-- 认证管理器，实现用户认证的入口，主要实现UserDetailsService接口即可 -->
+    <authentication-manager alias="authenticationManager">
+        <authentication-provider
+                user-service-ref="myUserDetailService">
+            <!--   如果用户的密码采用加密的话，可以加点“盐”
+                <password-encoder hash="md5" />
+            -->
+        </authentication-provider>
+    </authentication-manager>
+    <beans:bean id="myUserDetailService"
+                class="org.mybatis.weigao.service.MyUserDetailService" />
+
+    <!-- 访问决策器，决定某个用户具有的角色，是否有足够的权限去访问某个资源 -->
+    <beans:bean id="myAccessDecisionManagerBean"
+                class="org.mybatis.weigao.security.MyAccessDecisionManager">
+    </beans:bean>
+
+    <!-- 资源源数据定义，即定义某一资源可以被哪些角色访问 -->
+    <beans:bean id="securityMetadataSource"
+                class="org.mybatis.weigao.security.MyInvocationSecurityMetadataSource" />
+    <beans:bean id="messageSource"
+              class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+            <beans:property name="basename" value="classpath:messages_zh_CN"/>
+        </beans:bean>
+
+</beans:beans>

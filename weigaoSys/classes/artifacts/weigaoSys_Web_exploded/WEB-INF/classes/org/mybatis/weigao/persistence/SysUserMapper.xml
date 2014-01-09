@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.mybatis.weigao.persistence.SysUserMapper">
+
+    <select id="getSysUser" parameterType="SysUser" resultType="SysUser">
+        SELECT [No]
+              ,[UserID]
+              ,[Password]
+              ,[PWD_LowID] as pwdLowId
+              ,[Role_ID]   as roleId
+              ,[Role_WEB] as roleWeb
+              ,[UserName]
+              ,[Depart]
+              ,[Emp_ID] as emp_id
+              ,[Adapted]
+              ,[Operator]
+              ,[OperDate]
+              ,[CreationDate]
+              ,IsResearchAdmin
+              ,isSalesFloor
+          FROM [WEGO].[dbo].[SYSUser]
+          where UserID = #{userId} and Password = #{password}
+    </select>
+
+    <select id="getSysUserByUid" parameterType="string" resultType="SysUser" >
+            SELECT [No]
+                  ,[UserID]
+                  ,[Password]
+                  ,[PWD_LowID] as pwdLowId
+                  ,[Role_ID]   as roleId
+                  ,[Role_WEB] as roleWeb
+                  ,[UserName]
+                  ,[Depart]
+                  ,[Emp_ID] as emp_id
+                  ,[Adapted]
+                  ,[Operator]
+                  ,[OperDate]
+                  ,[CreationDate]
+                  ,IsResearchAdmin
+                  ,isSalesFloor
+              FROM [WEGO].[dbo].[SYSUser]
+              where UserID = #{userId}
+        </select>
+</mapper>
