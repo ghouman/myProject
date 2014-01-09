@@ -18,8 +18,6 @@
         <if test="provinceId != null">
             and ProvinceID = #{provinceId}
         </if>
-
-
         order by uid
     </select>
 

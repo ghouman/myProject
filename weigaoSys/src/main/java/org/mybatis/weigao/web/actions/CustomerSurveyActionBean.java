@@ -10,12 +10,15 @@ import org.displaytag.pagination.PaginatedList;
 import org.mybatis.weigao.common.util.core.domain.PaginatedListHelper;
 import org.mybatis.weigao.domain.*;
 import org.mybatis.weigao.service.CustomerSurveyService;
+import org.mybatis.weigao.service.MyUserDetailService;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.io.StringReader;
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -40,6 +43,8 @@ public class CustomerSurveyActionBean extends AbstractActionBean {
 
     @SpringBean
     private transient CustomerSurveyService customerSurveyService;
+    @SpringBean
+    private transient MyUserDetailService myUserDetailService;
 
 /*    @SpringBean
             private transient CustomerService customerService;*/
@@ -139,9 +144,26 @@ public class CustomerSurveyActionBean extends AbstractActionBean {
     }
 
     public ForwardResolution goAddCustomerSurvey() {
-       /* String surveyNo = customerSurveyService.getSurveyNo();
-        customerSurvey = new CustomerSurvey();
-        customerSurvey.setSurveyNo(surveyNo);*/
+        SysUser sysUser = this.getSysUser();
+        String userName = sysUser.getUserName();
+        HttpServletRequest request = context.getRequest();
+        int customerUid = Integer.parseInt(request.getParameter("customerUid"));
+        CustomerSurvey customerSurvey1 = new CustomerSurvey();
+        customerSurvey1.setCustomerId(customerUid);
+        customerSurvey1.setVerify("1");
+        customerSurvey1.setClerk(userName);
+        //根据customer Id获取已复审的调研列表
+        List<CustomerSurvey> customerSurveyList = customerSurveyService.getCustomerSurvey(customerSurvey1);
+        List<SurveyDetail> surveyDetails = new ArrayList();
+        surveyDetailList = new ArrayList();
+        //获取所有复审的调研明细
+        //for (int i = 0; i < customerSurveyList.size(); i++) {
+        customerSurvey1 = customerSurveyList.get(0);
+        surveyDetails = customerSurveyService.getSurveyDetail(customerSurvey1.getUid());
+        for (int j = 0; j < surveyDetails.size(); j++) {
+            surveyDetailList.add(surveyDetails.get(j));
+        }
+        //}
         return new ForwardResolution(ADDCUSTOMERSURVEY);
     }
 
@@ -154,26 +176,26 @@ public class CustomerSurveyActionBean extends AbstractActionBean {
 
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         Collection collectionAuth = auth.getAuthorities();
-        logger.debug("collectionAuth:" + collectionAuth + " name:" + auth.getName() + " viewCustomer ");
+        SysUser sysUser = this.getSysUser();
+        String userName = sysUser.getUserName();
+        logger.debug("collectionAuth:" + collectionAuth + " name:" + userName + " viewCustomer ");
         if (customerSurvey == null) {
             customerSurvey = new CustomerSurvey();
         }
         if (collectionAuth.toString().contains("业务员")) {
-            customerSurvey.setPreparer(auth.getName());
+            customerSurvey.setPreparer(userName);
         } else if (collectionAuth.toString().contains("区域主管")) {
-            customerSurvey.setPreparerManager(auth.getName());
+            customerSurvey.setPreparerManager(userName);
         } else if (collectionAuth.toString().contains("大区经理")) {
-            customerSurvey.setManager(auth.getName());
-        } else if (collectionAuth.toString().contains("客服部")) {
-            customerSurvey.setManagerEng(auth.getName());
+            customerSurvey.setManager(userName);
+        } else if (collectionAuth.toString().contains("客服部")||collectionAuth.toString().contains("普通客服")) {
+            customerSurvey.setManagerEng(userName);
         }
-        if(customerSurvey.getChecked()==null){
-            customerSurvey.setChecked("0");//默认为否
-        } else if ("否".equals(customerSurvey.getChecked())) {
+        if ("否".equals(customerSurvey.getChecked())) {
             customerSurvey.setChecked("0");
         } else if ("是".equals(customerSurvey.getChecked())) {
             customerSurvey.setChecked("1");
-        } else if ("all".equals(customerSurvey.getChecked())){
+        } else if ("all".equals(customerSurvey.getChecked())) {
             customerSurvey.setChecked(null);
         }
         if ("否".equals(customerSurvey.getSubmit())) {
@@ -181,10 +203,14 @@ public class CustomerSurveyActionBean extends AbstractActionBean {
         } else if ("是".equals(customerSurvey.getSubmit())) {
             customerSurvey.setSubmit("1");
         }
-        if ("否".equals(customerSurvey.getVerify())) {
+        if (customerSurvey.getVerify() == null) {
+            customerSurvey.setVerify("0");
+        } else if ("否".equals(customerSurvey.getVerify())) {
             customerSurvey.setVerify("0");
         } else if ("是".equals(customerSurvey.getVerify())) {
             customerSurvey.setVerify("1");
+        } else if ("all".equals(customerSurvey.getVerify())) {
+            customerSurvey.setVerify(null);
         }
 
         HttpServletRequest request = context.getRequest();
@@ -257,17 +283,18 @@ public class CustomerSurveyActionBean extends AbstractActionBean {
         /*if(sysUser == null){
             return new ForwardResolution(SIGNON);
         }*/
-        if(customerSurvey==null){
+        if (customerSurvey == null) {
             customerSurvey = new CustomerSurvey();
         }
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        customerSurvey.setCreator(auth.getName());
-        customerSurvey.setPreparer(auth.getName());
+        SysUser sysUser = this.getSysUser();
+        String userName = sysUser.getUserName();
+        customerSurvey.setCreator(userName);
+        customerSurvey.setPreparer(userName);
         try {
-            customerSurveyService.addCustomerSurvey(customerSurvey);
+            customerSurveyService.addCustomerSurvey(customerSurvey, userName);
         } catch (Exception e) {
             logger.error("添加客户调研异常：" + e.getMessage());
-            if(e.getMessage().indexOf("IX_oSurvey")>-1){
+            if (e.getMessage().indexOf("IX_oSurvey") > -1) {
                 return new ForwardResolution("/WEB-INF/jsp/weigao/redriect.jsp?flag=addCustomerSurveyFail_IX");
             }
             return new ForwardResolution("/WEB-INF/jsp/weigao/redriect.jsp?flag=addCustomerSurveyFail");
@@ -285,11 +312,13 @@ public class CustomerSurveyActionBean extends AbstractActionBean {
         }*/
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         Collection collectionAuth = auth.getAuthorities();
-        customerSurvey.setOperator(auth.getName());
+        SysUser sysUser = this.getSysUser();
+        String userName = sysUser.getUserName();
+        customerSurvey.setOperator(userName);
 
-        customerSurveyService.updateCustomerSurvey(customerSurvey);
+        customerSurveyService.updateCustomerSurvey(customerSurvey, userName);
         if (collectionAuth.toString().contains("业务员")) {
-            customerSurvey.setPreparer(auth.getName());
+            customerSurvey.setPreparer(userName);
         }
         return new ForwardResolution("/WEB-INF/jsp/weigao/redriect.jsp?flag=customerSurvey");
     }
@@ -315,8 +344,8 @@ public class CustomerSurveyActionBean extends AbstractActionBean {
     public Resolution updateCustomerStatus() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         Collection collectionAuth = auth.getAuthorities();
-        String name = auth.getName();
-
+        SysUser sysUser = this.getSysUser();
+        String userName = sysUser.getUserName();
         HttpServletRequest request = context.getRequest();
         int uid = Integer.parseInt(request.getParameter("uid"));
         String checked = request.getParameter("checked");
@@ -327,23 +356,23 @@ public class CustomerSurveyActionBean extends AbstractActionBean {
         String verifyMemo = request.getParameter("verifyMemo");
         String returnCheckRemark = request.getParameter("returnCheckRemark");
         CustomerSurvey customerSurvey1 = new CustomerSurvey();
-        customerSurvey1.setOperator(name);
+        customerSurvey1.setOperator(userName);
 
         if (collectionAuth.toString().contains("业务员")) {
             customerSurvey1.setChecked(checked);
-            customerSurvey1.setChecker(name);
+            customerSurvey1.setChecker(userName);
         } else if (collectionAuth.toString().contains("区域主管")) {
             if (checked != null) {
                 customerSurvey1.setChecked(checked);
-                customerSurvey1.setChecker(name);
+                customerSurvey1.setChecker(userName);
             } else if (submit != null) {
                 customerSurvey1.setSubmit(submit);
                 customerSurvey1.setSubmitMemo(submitMemo);
-                customerSurvey1.setSubmitUser(name);
+                customerSurvey1.setSubmitUser(userName);
             } else if (returnCheckRemark != null) {
                 customerSurvey1.setReturnCheck("true");
                 customerSurvey1.setSubmitMemo(returnCheckRemark);
-                customerSurvey1.setSubmitUser(name);
+                customerSurvey1.setSubmitUser(userName);
             }
         } else if (collectionAuth.toString().contains("大区经理") || collectionAuth.toString().contains("客服部")) {
             if (returnCheckRemark != null) {
@@ -353,7 +382,7 @@ public class CustomerSurveyActionBean extends AbstractActionBean {
                 customerSurvey1.setSubmit(submit);
                 customerSurvey1.setSubmitMemo(submitMemo);
             }
-            customerSurvey1.setSubmitUser(name);
+            customerSurvey1.setSubmitUser(userName);
         } else if (collectionAuth.toString().contains("系统管理员")) {
             if (returnCheckRemark != null) {
                 customerSurvey1.setReturnCheck("true");
@@ -362,7 +391,7 @@ public class CustomerSurveyActionBean extends AbstractActionBean {
                 customerSurvey1.setVerify(verify);
                 customerSurvey1.setVerifyMemo(verifyMemo);
             }
-            customerSurvey1.setVerifier(name);
+            customerSurvey1.setVerifier(userName);
         }
         customerSurvey1.setUid(uid);
         customerSurvey1.setSurveyNo(surveyNo);
@@ -383,16 +412,22 @@ public class CustomerSurveyActionBean extends AbstractActionBean {
     public Resolution getNoCheckCount() { //获取未提交订单数量
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         Collection collectionAuth = auth.getAuthorities();
-        String name = auth.getName();
+        SysUser sysUser = this.getSysUser();
+        String userName = sysUser.getUserName();
         CustomerSurvey customerSurvey1 = new CustomerSurvey();
         if (collectionAuth.toString().contains("业务员")) {
-            customerSurvey1.setPreparer(name);
+            customerSurvey1.setPreparer(userName);
             customerSurvey1.setChecked("0");
         }
         int size = customerSurveyService.countSurveySize(customerSurvey1);
         JSONObject jsonObj = new JSONObject();
         jsonObj.put("size", size);
         return new StreamingResolution("text", new StringReader(jsonObj.toString()));
+    }
+
+    public SysUser getSysUser() {
+        SysUser sysUser = (SysUser) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        return sysUser;
     }
 
     public void clear() {

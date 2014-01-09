@@ -24,7 +24,8 @@ public class CustomerSurvey implements Serializable {
     private String operator;
     private String operDate;
     private String surveyNo;//调研编号
-    private String surveyDate;
+    private String surveyDate; //调研起始日期
+    private String surveyEndDate; //调研结束日期
     private String preparer;//填表人员
     private String preparerDate;
     private String checked;//是否提交
@@ -44,7 +45,8 @@ public class CustomerSurvey implements Serializable {
     private Integer doctor; //医生人数
     private Integer nurse;
     private Integer engineer;
-    private String hospitalMemo; //医院信息
+    private String chospitalMemo; //医院信息
+    private String hospitalMemo; //调研备注
     private Integer hdfMachine;   //  现有血透机数
     private Integer hdfCapacity;   //  血透室空间可容纳最大床位数
     private Integer waterTreatment;    //现有水处理可带最大床位数
@@ -101,6 +103,22 @@ public class CustomerSurvey implements Serializable {
     private String submitMemo;
     private String verifyMemo;
     private String returnCheck;
+
+    public String getChospitalMemo() {
+        return chospitalMemo;
+    }
+
+    public void setChospitalMemo(String chospitalMemo) {
+        this.chospitalMemo = chospitalMemo;
+    }
+
+    public String getSurveyEndDate() {
+        return surveyEndDate;
+    }
+
+    public void setSurveyEndDate(String surveyEndDate) {
+        this.surveyEndDate = surveyEndDate;
+    }
 
     public String getPreparerManager() {
         return preparerManager;

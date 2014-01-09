@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="stripes"
            uri="http://stripes.sourceforge.net/stripes.tld" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
@@ -51,17 +51,18 @@
             min-width: 980px;
         }
 
-
         .container .credit {
             margin: 20px 0;
-        }  -->
+        }
+
+        -->
     </style>
     <script type="text/javascript">
-     /*   setTimeout(
-                function(){
-                    window.locaton.reload(window.history.go(-1));
-                }, 2000
-        )*/
+        /*   setTimeout(
+         function(){
+         window.locaton.reload(window.history.go(-1));
+         }, 2000
+         )*/
 
     </script>
 
@@ -74,27 +75,28 @@
 <!-- Navbar
 ================================================== -->
 
-    <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container-fluid">
-                <a class="btn btn-navbar" data-toggle="collapse"
-                   data-target=".nav-collapse"> <span class="icon-bar"></span> <span
-                        class="icon-bar"></span> <span class="icon-bar"></span>
-                </a> <a class="brand" href="#">威高血液净化公司客户调研管理系统</a>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="btn btn-navbar" data-toggle="collapse"
+               data-target=".nav-collapse"> <span class="icon-bar"></span> <span
+                    class="icon-bar"></span> <span class="icon-bar"></span>
+            </a> <a class="brand" href="#">威高血液净化公司客户调研管理系统</a>
 
-                <div class="nav-collapse" id="main-menu">
-                    <ul class="nav pull-right" id="main-menu-right">
-                                                <li></li>
-                                            <li>
-                                               <a href="/login.jsp" >登录
-                                               <i class="icon-share-alt"></i>
-                                            </a>
-                                            </li>
-                                        </ul>
+            <div class="nav-collapse" id="main-menu">
+                <ul class="nav pull-right" id="main-menu-right">
+                    <li></li>
+                    <li>
 
-                </div>
+                        <a  href="/logout">登录
+                            <i class="icon-share-alt"></i>
+                        </a>
+                    </li>
+                </ul>
+
             </div>
         </div>
     </div>
+</div>
 
 

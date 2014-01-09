@@ -60,6 +60,10 @@
                 net.sourceforge.stripes.integration.spring.SpringInterceptor
             </param-value>
         </init-param>
+        <init-param>
+             <param-name>ExceptionHandler.Class</param-name>
+             <param-value>org.mybatis.weigao.Exception.MyExceptionHandler</param-value>
+         </init-param>
     </filter>
     <filter-mapping>
         <filter-name>StripesFilter</filter-name>
@@ -96,7 +100,6 @@
         <url-pattern>*.jsp</url-pattern>
     </filter-mapping>
 
-
     <!-- Spring刷新Interceptor防止内存泄漏  -->
     <listener>
         <listener-class>
@@ -105,9 +108,9 @@
     </listener>
 
 
-    <!-- 设置session 超时时间为20分钟  -->
+    <!-- 设置session 超时时间为30分钟  -->
     <session-config>
-        <session-timeout>20</session-timeout>
+        <session-timeout>30</session-timeout>
     </session-config>
 
     <welcome-file-list>
@@ -141,14 +144,17 @@
         <location>/WEB-INF/jsp/common/404.jsp</location>
         <!-- 表示当系统发生404就是不存在请求地址的错误的时候，页面跳转到404.html页面。 -->
     </error-page>
+
     <error-page>
         <error-code>500</error-code>
         <location>/WEB-INF/jsp/common/Error.jsp</location>
-        <!-- 表示当系统发生500也就是操作异常错误的时候，页面跳转到error.jsp页面。 -->
+    <!-- 表示当系统发生500也就是操作异常错误的时候，页面跳转到error.jsp页面。-->
     </error-page>
+
+    <!--
     <error-page>
         <exception-type>java.lang.NullPointerException</exception-type>
         <location>/WEB-INF/jsp/common/Error.jsp</location>
-        <!-- 表示当系统发生空指针异常错误的时候，页面跳转到error.html页面。 -->
-    </error-page>
+       表示当系统发生空指针异常错误的时候，页面跳转到error.html页面。
+    </error-page>    -->
 </web-app>

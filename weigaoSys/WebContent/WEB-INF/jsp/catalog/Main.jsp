@@ -15,18 +15,18 @@
 
             </p>
       <p style="height: 120px">
-          <a href="/actions/CustomerSurvey.action" class="btn btn-primary btn-large">客户调研列表</a>
+          <a href="CustomerSurvey.action" class="btn btn-primary btn-large">客户调研列表</a>
           <a href="/actions/Customer.action" class="btn btn-primary btn-large">客户名单列表</a>
       </p>
         <ul class="masthead-links">
               <li>
-                <a >©2013 Gisco and/or its affiliates. All rights reserved.</a>
+                <a >©2013 ghouman and/or its affiliates. All rights reserved.</a>
               </li>
               <li>
 
               </li>
               <li>
-                ghouman@cisco.com
+                  xiaoqiang.huang@wgbp.net
               </li>
               <li>
                 Version 1.0

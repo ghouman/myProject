@@ -20,7 +20,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <meta content="text/html" charset="utf-8" http-equiv="Content-Type"/>
     <meta http-equiv="Cache-Control" content="max-age=0"/>
     <meta http-equiv="Cache-Control" content="no-cache"/>
-    <title>登录威高血液净化公司客户调研管理系统</title>
+    <title>威高调研管理系统</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="ghouman <ghouman@cisco.com>">
 
@@ -76,10 +76,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         height: 100%;
         padding-right: 20px;
     }
+    .alert {
+        margin-bottom: 0px;
+    }
 </style>
 
 </head>
 <body>
+<c:if test="${SPRING_SECURITY_LAST_EXCEPTION.message!=null}">
+<div class="alert alert-block alert-error fade in" >
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <h4 class="alert-heading">登录信息!</h4>
+            <p>
+			${SPRING_SECURITY_LAST_EXCEPTION.message}
+			</p>
+
+          </div>
+</div>
+</c:if>
 <div id="global" style="display:none">
 <div class="alert alert-block alert-error fade in">
             <button type="button" class="close" data-dismiss="alert">×</button>
@@ -113,10 +127,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <h2>用户登录</h2>
 
                 <c:if test="${param.error == 'true'}">
-                    <p style="color: red"> 登录失败，请重试 </p>
+                    <p style="color: red"> 登录失败，请重试! </p>
                 </c:if>
-                <p><input type="text" name="j_username" id="bestLoginUsername" value="${SPRING_SECURITY_LAST_USERNAME}" placeholder="请输入用户名" required/></p>
-                <p>  <input type="password" name="j_password" id="bestLoginPassword" value="" placeholder="请输入密码" required/></p>
+                <p><input type="text" name="j_username" id="bestLoginUsername" value="${SPRING_SECURITY_LAST_USERNAME}" placeholder="邮箱" required/></p>
+                <p>  <input type="password" name="j_password" id="bestLoginPassword" value="" placeholder="密码" required/></p>
                 <section class="row-fluid">
                                <section class="span8 lh30"><label><input type="checkbox" name="_spring_security_remember_me"/>下次自动登录</label></section>
                                <section class="span1"><input type="submit" id="login"  value=" 登录 " class="btn btn-primary"></section>
@@ -128,8 +142,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <section>
                 <p style="color: red">
                     本系统采用WEB技术HTML5,为了您更好体验本系统，请使用最新版谷歌，火狐或IE8以上浏览器,请设置您的浏览器为自动更新。
-
-
                 </p>
                 <!--<p><input type="button" value=" 注册 " class="btn"></p> -->
             </section>
@@ -137,6 +149,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </section>
     <!-- /loginBox -->
 </div>
+
 <!-- /container -->
 </body>
 <script type="text/javascript">
@@ -166,7 +179,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     }
 	
 	
-	if(($.browser.msie && parseFloat($.browser.version)>=8)|| ($.browser.mozilla && parseFloat($.browser.version)>=10) || ($.browser.chrome && parseFloat($.browser.version) >= 10) || ($.browser.safari && parseFloat($.browser.version) >= 5) ){
+	if(($.browser.msie && parseFloat($.browser.version)>=8)|| ($.browser.mozilla && parseFloat($.browser.version)>=10) || ($.browser.chrome && parseFloat($.browser.version) >= 26) || ($.browser.safari && parseFloat($.browser.version) >= 5) ){
 	} else {
 		$("#global").show();
 	}

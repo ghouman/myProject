@@ -1,5 +1,5 @@
-$(function ($) {
 
+$(function ($) {
     $.getUrlParam = function (name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
         var r = window.location.search.substr(1).match(reg);
@@ -7,7 +7,7 @@ $(function ($) {
         return null;
     };
 
-    function SetCookie(name, value)//两个参数，一个是cookie的名子，一个是值
+    SetCookie = function (name, value)//两个参数，一个是cookie的名子，一个是值
     {
         var Days = 30; //此 cookie 将被保存 30 天
         var exp = new Date();    //new Date("December 31, 9998");
@@ -15,7 +15,7 @@ $(function ($) {
         document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
     }
 
-    function getCookie(name)//取cookies函数
+    getCookie = function (name)//取cookies函数
     {
         var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
         if (arr != null) return unescape(arr[2]);
@@ -23,7 +23,7 @@ $(function ($) {
 
     }
 
-    function delCookie(name)//删除cookie
+    delCookie = function(name)//删除cookie
     {
         var exp = new Date();
         exp.setTime(exp.getTime() - 1);
@@ -107,6 +107,15 @@ function loadPort(provinceId) {
     });
 }
 
-
+function logout() {
+    $("#userName").val('');
+    $("#authenticated").val('');
+    $("#roleWeb").val('');
+    WEGO.authenticated = '';
+    WEGO.roleWeb = '';
+    WEGO.userName = '';
+    //window.location.href="/Login.action?signoff="
+    window.location.href = "/logout";
+}
 
 

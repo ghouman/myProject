@@ -4,14 +4,15 @@
 
 <mapper namespace="org.mybatis.weigao.persistence.CustomerSurveyMapper">
 
-    <cache/>
+    <cache flushInterval="5000"
+           size="512"/>
 
     <select id="countSurveySize" parameterType="CustomerSurvey" resultType="int">
         select count(*) FROM dbo.oSurvey AS A LEFT OUTER JOIN
         dbo.bCUSTOMER AS CUST ON A.CustomerID = CUST.UID LEFT OUTER JOIN
         dbo.b0Port AS P1 ON CUST.PortID = P1.UID LEFT OUTER JOIN
         dbo.b0Province AS P2 ON P1.ProvinceID = P2.UID
-        where 1=1
+        where CUST.IsDisable = 0
         <if test="province != null">
             and P2.Province like '%'+#{province}+'%'
         </if>
@@ -31,7 +32,7 @@
             and A.SurveyNo like '%'+#{surveyNo}+'%'
         </if>
         <if test="preparer != null">
-            and A.preparer like '%'+#{preparer}+'%'
+            and A.preparer = #{preparer}
         </if>
         <if test="checked != null">
             and A.IsCheck = #{checked}
@@ -43,7 +44,10 @@
             and A.IsVerify = #{verify}
         </if>
         <if test="surveyDate != null">
-            and A.SurveyDate = #{surveyDate}
+            and <![CDATA[A.SurveyDate >= #{surveyDate}]]>
+        </if>
+        <if test="surveyEndDate != null">
+            and <![CDATA[A.SurveyDate <= #{surveyEndDate}]]>
         </if>
         <if test="manager !=null">
             and A.Preparer in ( SELECT [Clerk]
@@ -103,16 +107,19 @@
         -->
 
     <select id="getCustomerSurvey" parameterType="CustomerSurvey" resultType="CustomerSurvey">
-        select * from (
-        SELECT ROW_NUMBER() OVER(ORDER BY A.uid desc) as rowNum ,
-        A.UID,A.SurveyNo,A.submitMemo,A.verifyMemo,
+        select TOP 15 * from (
+        SELECT TOP 100 percent
+        A.UID,A.SurveyNo,A.submitMemo,A.verifyMemo,A.Checker,A.CheckDate,
+        A.SubmitUser,A.SubmitDate,A.Verifier,A.VerifyDate,
+        (SELECT top 1 Manager FROM SalesRegion WHERE Region = K3.SRegion) as Manager,
+        b2.Floor as preparerManager,
         case A.IsCheck when 0 then '否' when 1 then '是' end as checked,
         case A.IsSubmit when 0 then '否' when 1 then '是' end as submit,
         case A.IsVerify when 0 then '否' when 1 then '是' end as verify,
         A.Preparer, A.SurveyDate,CUST.Coop_Type as coopType,CUST.custVal,
         CUST.CUSTOMER,A.CustomerID, CUST.ZECT, P1.Port, P2.Province, CUST.Clerk,CUST.postalCode,
         CUST.SalesRegion, CUST.address,CUST.website, CUST.healthClass,CUST.hierarchy,CUST.coop_DT,
-        LabOffice,LabTel,Doctor,Nurse,Engineer,A.HospitalMemo,
+        LabOffice,LabTel,Doctor,Nurse,Engineer,A.HospitalMemo,CUST.HospitalMemo as chospitalMemo,
         HDF_Machine as hdfMachine,HDF_Capacity as hdfCapacity, WaterTreatment
         ,HospitalSurgical,A.IsProduct as ynProduct,A.IsPlan as ynPlan,
         RenalClinic,HD ,HF, HDF, CRRT, HP, ChannelDYMO ,ChannelDevice ,IsProduct ,ProductPeriod,
@@ -122,7 +129,9 @@
         dbo.bCUSTOMER AS CUST ON A.CustomerID = CUST.UID LEFT OUTER JOIN
         dbo.b0Port AS P1 ON CUST.PortID = P1.UID LEFT OUTER JOIN
         dbo.b0Province AS P2 ON P1.ProvinceID = P2.UID
-        where 1=1
+        LEFT OUTER JOIN K3_Salesman AS K3 on CUST.Clerk=K3.Clerk
+        LEFT OUTER JOIN b2SalesFloor AS b2 on CUST.Clerk=b2.Sales
+        where CUST.IsDisable = 0
         <if test="province != null">
             and P2.Province like '%'+#{province}+'%'
         </if>
@@ -142,7 +151,7 @@
             and A.SurveyNo like '%'+#{surveyNo}+'%'
         </if>
         <if test="preparer != null">
-            and A.preparer like '%'+#{preparer}+'%'
+            and A.preparer = #{preparer}
         </if>
         <if test="checked != null">
             and A.IsCheck = #{checked}
@@ -150,11 +159,17 @@
         <if test="submit != null">
             and A.IsSubmit = #{submit}
         </if>
+        <if test="customerId != 0">
+            and CUST.uid = #{customerId}
+        </if>
         <if test="verify != null">
             and A.IsVerify = #{verify}
         </if>
         <if test="surveyDate != null">
-            and A.SurveyDate = #{surveyDate}
+            and <![CDATA[A.SurveyDate >= #{surveyDate}]]>
+        </if>
+        <if test="surveyEndDate != null">
+            and <![CDATA[A.SurveyDate <= #{surveyEndDate}]]>
         </if>
         <if test="manager !=null">
             and A.Preparer in ( SELECT [Clerk]
@@ -168,9 +183,68 @@
         <if test="preparerManager !=null">
             and A.preparer in (select sales from b2SalesFloor where FLOOR = #{preparerManager})
         </if>
-        ) as t
-        where  <![CDATA[rowNum>#{fromIndex} and rowNum<= #{toIndex}]]>
-
+        ORDER BY A.UID desc) as t
+        where
+        (UID NOT IN
+        (SELECT TOP ${fromIndex} A.UID
+        FROM dbo.oSurvey AS A LEFT OUTER JOIN
+        dbo.bCUSTOMER AS CUST ON A.CustomerID = CUST.UID LEFT OUTER JOIN
+        dbo.b0Port AS P1 ON CUST.PortID = P1.UID LEFT OUTER JOIN
+        dbo.b0Province AS P2 ON P1.ProvinceID = P2.UID
+        where CUST.IsDisable = 0
+        <if test="province != null">
+            and P2.Province like '%'+#{province}+'%'
+        </if>
+        <if test="port != null">
+            and P1.Port like '%'+#{port}+'%'
+        </if>
+        <if test="salesRegion != null">
+            and CUST.SalesRegion like '%'+#{salesRegion}+'%'
+        </if>
+        <if test="customer != null">
+            and CUST.CUSTOMER like '%'+#{customer}+'%'
+        </if>
+        <if test="uid != 0">
+            and A.uid = #{uid}
+        </if>
+        <if test="surveyNo != null">
+            and A.SurveyNo like '%'+#{surveyNo}+'%'
+        </if>
+        <if test="preparer != null">
+            and A.preparer = #{preparer}
+        </if>
+        <if test="checked != null">
+            and A.IsCheck = #{checked}
+        </if>
+        <if test="submit != null">
+            and A.IsSubmit = #{submit}
+        </if>
+        <if test="customerId != 0">
+            and CUST.uid = #{customerId}
+        </if>
+        <if test="verify != null">
+            and A.IsVerify = #{verify}
+        </if>
+        <if test="surveyDate != null">
+            and <![CDATA[A.SurveyDate >= #{surveyDate}]]>
+        </if>
+        <if test="surveyEndDate != null">
+            and <![CDATA[A.SurveyDate <= #{surveyEndDate}]]>
+        </if>
+        <if test="manager !=null">
+            and A.Preparer in ( SELECT [Clerk]
+            from [K3_Salesman] a where (select top 1 manager from SalesRegion where a.SRegion = Region)= #{manager})
+        </if>
+        <if test="managerEng !=null">
+            and A.preparer in (SELECT [Clerk]
+            from [K3_Salesman] a where SRegion in (select SalesRegion from b2EngineerComplaint where Engineer=
+            #{managerEng}))
+        </if>
+        <if test="preparerManager !=null">
+            and A.preparer in (select sales from b2SalesFloor where FLOOR = #{preparerManager})
+        </if>
+        ORDER BY A.UID desc))
+        ORDER BY UID desc
     </select>
 
     <update id="updateCustomerSurveyStatus" parameterType="CustomerSurvey">

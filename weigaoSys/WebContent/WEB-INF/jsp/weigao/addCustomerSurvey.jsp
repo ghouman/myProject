@@ -11,7 +11,7 @@
 --%>
 <style type="text/css">
     .form-control {
-      width: 100px;
+        width: 100px;
     }
 </style>
 <div class="container">
@@ -33,48 +33,59 @@
 <table class="table table-bordered">
     <tr>
         <th width="80">客户名称：</th>
-        <td colspan="2" id="customer"></td>
-        <th width="80">合作公司：</th>
-        <td colspan="2" id="zect"></td>
+        <td id="customer" width="25%"></td>
+        <th width="105">组织机构代码：</th>
+        <td id="zect"  width="25%"></td>
+        <th width="80">客户类型：</th>
+        <td id="custVal" width="215"></td>
     </tr>
     <tr>
-        <th>客户类型：</th>
-        <td id="custVal"></td>
         <th>客户地址：</th>
-        <td colspan="3" id="address"></td>
+        <td id="address"></td>
+        <th>所在城市：</th>
+        <td id="port"></td>
+        <th>所属省份：</th>
+        <td id="province"></td>
     </tr>
     <tr>
         <th width="80">客户网址：</th>
         <td id="webSite"></td>
-        <th width="80">医院等级：</th>
-        <td id="healthClass"></td>
-        <th width="80">行政级别：</th>
-        <td id="hierarchy"></td>
-    </tr>
-    <tr>
-        <th>合作时间：</th>
-        <td id="coop_DT"></td>
-        <th>邮编：</th>
-        <td id="postalCode"></td>
-        <th>所在城市：</th>
-        <td id="port"></td>
-    </tr>
-    <tr>
-        <th>省份：</th>
-        <td id="province"></td>
         <th>负责专员：</th>
         <td id="clerk"></td>
         <th>销售大区：</th>
         <td id="salesRegion"></td>
     </tr>
-
     <tr>
+        <th width="80">大区经理：</th>
+                          <td id="manager"></td>
+                          <th width="80">区域主管：</th>
+                          <td id="preparerManager"></td>
+        <th width="80">医院等级：</th>
+        <td id="healthClass"></td>
+
+    </tr>
+    <tr>  <th width="80">行政级别：</th>
+            <td id="hierarchy"></td>
+            <th>执业许可证：</th>
+            <td id="coop_DT"></td>
         <th>所属科室：</th>
         <td id="labOffice"></td>
-        <th>所属科室电话：</th>
-        <td colspan="3" id="labTel"></td>
-    </tr>
 
+    </tr>
+    <tr>
+        <th>血透室电话：</th>
+                <td id="labTel"></td>
+                <th>邮编：</th>
+                <td id="postalCode"></td>
+        <th></th>
+        <td></td>
+    </tr>
+    <tr>
+                <th>医院信息</th>
+                <td colspan="5" id="chospitalMemo">
+                    ${actionBean.customerSurvey.chospitalMemo}
+                </td>
+            </tr>
 </table>
 <hr>
 <!--相关负责人-->
@@ -87,7 +98,7 @@
         <th width='15%'>决策范围：</th>
         <th width='15%'>个人爱好：</th>
         <th width='20%'>学术影响力：</th>
-        <th width='10%'>生日：</th>
+        <th width='10%'>身份证/生日：</th>
 
 
     </tr>
@@ -109,14 +120,7 @@
         </td>
 
     </tr>
-    <tr>
-        <th>Remark：</th>
-        <td colspan="5">
-            <stripes:textarea rows="3" style="width:90%" name="customerSurvey.hospitalMemo" class=" form-control"
-                              id="hospitalMemo" value="${actionBean.customerSurvey.hospitalMemo}"/>
 
-        </td>
-    </tr>
     <tr>
         <th>医生人数：</th>
         <td><input type="number" name="customerSurvey.doctor" class="form-control" id="doctor" value="0"
@@ -188,19 +192,21 @@
                 <%--<stripes:text name="customerSurvey.hp" class="form-control" id="hp"/>--%></td>
         <th>耗材产品销售渠道：</th>
         <td>
-            <input type="radio" name="customerSurvey.channelDYMO" value="直销" class="form-control" id="channelDYMO"
-                   checked="true" >&nbsp;直销&nbsp;&nbsp;
+            <input type="radio" name="customerSurvey.channelDYMO" value="全部" class="form-control"
+                   checked="true">全部
+            <input type="radio" name="customerSurvey.channelDYMO" value="直销" class="form-control"
+                   checked="true">&nbsp;直销
             <input type="radio" name="customerSurvey.channelDYMO" value="分销" class="form-control"
-                    id="channelDYMO1">&nbsp;分销
+                   id="channelDYMO1">&nbsp;分销
         </td>
         <th>设备销售产品渠道：</th>
         <td>
-            <stripes:select name="customerSurvey.channelDevice" class="form-control"  id="channelDevice"
-                                       value="${actionBean.customerSurvey.channelDevice}" >
-                           <stripes:option value="全部">全部</stripes:option>
-                           <stripes:option value="直销">直销</stripes:option>
-                           <stripes:option value="分销">分销</stripes:option>
-                               </stripes:select>
+            <input type="radio" name="customerSurvey.channelDevice" value="全部" class="form-control"
+                   checked="true">全部
+            <input type="radio" name="customerSurvey.channelDevice" value="直销" class="form-control"
+                    >&nbsp;直销
+            <input type="radio" name="customerSurvey.channelDevice" value="分销" class="form-control"
+                    >&nbsp;分销
         </td>
     </tr>
     <tr>
@@ -261,23 +267,31 @@
                 <%--<stripes:text name="customerSurvey.nepdF3" class="form-control" id="nepdF3"/>--%></td>
         <th>客户评判：</th>
         <td colspan="3">
-            <stripes:select name="customerSurvey.feedback" id="feedback">
-                <stripes:option value="战略">战略</stripes:option>
-                <stripes:option value="重要">重要</stripes:option>
-                <stripes:option value="一般">一般</stripes:option>
-            </stripes:select>
+            <input type="radio" name="customerSurvey.feedback" value="战略" class="form-control"
+                   checked="true">战略
+            <input type="radio" name="customerSurvey.feedback" value="重要" class="form-control"
+                    >&nbsp;重要
+            <input type="radio" name="customerSurvey.feedback" value="一般" class="form-control"
+                    >&nbsp;一般
         </td>
 
     </tr>
     <tr>
-           <th>评判说明：</th>
-           <td colspan="5">
-               <stripes:textarea rows="3" style="width:90%" name="customerSurvey.fbNote" class=" form-control"
-                                 id="fbNote" value="${actionBean.customerSurvey.fbNote}"/>
+        <th>评判说明：</th>
+        <td colspan="5">
+            <stripes:textarea rows="3" style="width:90%" name="customerSurvey.fbNote" class=" form-control"
+                              id="fbNote" value="${actionBean.customerSurvey.fbNote}"/>
 
-           </td>
-       </tr>
+        </td>
+    </tr>
+    <tr>
+        <th>调研备注：</th>
+        <td colspan="5">
+            <stripes:textarea rows="3" style="width:90%" name="customerSurvey.hospitalMemo" class=" form-control"
+                              id="hospitalMemo" value="${actionBean.customerSurvey.hospitalMemo}"/>
 
+        </td>
+    </tr>
 </table>
 
 
@@ -321,44 +335,65 @@
 
         <th width='8%'>产品型号</th>
 
-        <th width='10%'>数量/使用量</th>
-        <th width='10%'>复用情况</th>
+        <th width='10%'>数量/复用人次</th>
+        <th width='10%'>复用次数</th>
         <th width='8%'>市场价格</th>
-        <th width='8%'>装机时间</th>
+        <th width='8%'>初次使用时间</th>
+        <th width='10%'>销售公司</th>
         <th>备注</th>
         <th width='7%'>操作</th>
     </tr>
-    <!--
-    <tr>
-    <th width='10%'><select id='prodType' onchange='loadProInfo()' style="width: 70px;">
-    <option value='耗材' selected="selected">耗材</option>
-    <option value='设备'>设备</option>
-    </select></th>
+    <c:forEach var="surveyDetail" items="${actionBean.surveyDetailList}" varStatus="status">
+        <tr id="${status.count}">
+            <td><input type="hidden" id="uid" value="${surveyDetail.uid}"> ${surveyDetail.category}</td>
+            <td>${surveyDetail.brand}</td>
+            <td>${surveyDetail.family}</td>
+            <td>${surveyDetail.partNo}</td>
+            <td>
 
-    <th width='10%'><select id='category' onchange='loadBrand()' style="width: 150px;">
+                <input type="number" style='width:60px' name="surveyDetail.ahsca" id="amount"
+                       placeholder="请输入数量"
+                       value="${surveyDetail.ahsca}" required>
+            </td>
+            <td>
+                <input type="number" style='width:60px' name="surveyDetail.bReUseNote"
+                       id="reUseInfo"
+                       placeholder="请输入复用情况"
+                       value="${surveyDetail.bReUseNote}">
+            </td>
+            <td>
+                <input type="number" style='width:60px' name="surveyDetail.aPrice" id="price"
+                       placeholder="请输入价格"
+                       value="${surveyDetail.aPrice}" required>
+            </td>
 
-    </select></th>
-
-    <th width='10%'><select id='brand' onchange='loadFamily()' style="width: 130px;">
-
-    </select></th>
-
-    <th width='10%'><select id='family' onchange='loadPartNo()' style="width: 100px;">
-
-    </select></th>
-
-    <th width='10%'><select id='partNo' style="width: 100px;">
-
-    </select></th>
-
-    <th width='10%'></th>
-
-    <th width='10%'></th>
-
-    <th width='10%'></th>
-    <th width='20%'></th>
-    </tr>
-    -->
+            <td>
+                <input type="text" style='width:100px' name="surveyDetail.bInstallDate" class="datepicker form-control"
+                       id="bInstallDate"
+                       placeholder="请选择装机时间"
+                       value="${surveyDetail.bInstallDate}">
+            </td>
+            <td>
+                <textarea name="surveyDetail.bInstallDate" style='width:90%' id="salesAgency"
+                          placeholder="请输入销售公司"
+                        >${surveyDetail.salesAgency}</textarea>
+            </td>
+            <td>
+                <textarea name="surveyDetail.bInstallDate" style='width:90%' id="remark"
+                          placeholder="请输入备注"
+                        >${surveyDetail.remark}</textarea>
+            </td>
+            <input type='hidden' id='partNoUid' value='${surveyDetail.partID}'>
+            <td>
+                <div class='btn btn-primary' onclick='removeProd("${status.count}")'>移除</div>
+            </td>
+                <%--
+                <td><fmt:formatDate value="${order.orderDate}"
+                    pattern="yyyy/MM/dd hh:mm:ss" /></td>
+                <td><fmt:formatNumber value="${order.totalPrice}"
+                    pattern="$#,##0.00" /></td>   --%>
+        </tr>
+    </c:forEach>
     </tbody>
 </table>
 

@@ -4,8 +4,6 @@
 
 <mapper namespace="org.mybatis.weigao.persistence.SysUserMapper">
 
-    <cache/>
-
     <select id="getSysUser" parameterType="SysUser" resultType="SysUser">
         SELECT [No]
               ,[UserID]
@@ -23,10 +21,10 @@
               ,IsResearchAdmin
               ,isSalesFloor
           FROM [WEGO].[dbo].[SYSUser]
-          where UserName = #{userName} and Password = #{password}
+          where UserID = #{userId} and Password = #{password}
     </select>
 
-    <select id="getSysUserByName" parameterType="string" resultType="SysUser">
+    <select id="getSysUserByUid" parameterType="string" resultType="SysUser" >
             SELECT [No]
                   ,[UserID]
                   ,[Password]
@@ -43,6 +41,6 @@
                   ,IsResearchAdmin
                   ,isSalesFloor
               FROM [WEGO].[dbo].[SYSUser]
-              where UserName = #{userName}
+              where UserID = #{userId}
         </select>
 </mapper>

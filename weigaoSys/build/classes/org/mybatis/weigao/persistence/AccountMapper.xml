@@ -4,7 +4,8 @@
 
 <mapper namespace="org.mybatis.weigao.persistence.AccountMapper">
 
-  <cache />
+  <cache flushInterval="36000000"
+    size="512"/>
 
   <select id="getAccountByUsername" parameterType="string" resultType="Account">
     SELECT

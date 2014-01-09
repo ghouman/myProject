@@ -79,5 +79,9 @@
     <!-- 资源源数据定义，即定义某一资源可以被哪些角色访问 -->
     <beans:bean id="securityMetadataSource"
                 class="org.mybatis.weigao.security.MyInvocationSecurityMetadataSource" />
+    <beans:bean id="messageSource"
+              class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+            <beans:property name="basename" value="classpath:messages_zh_CN"/>
+        </beans:bean>
 
 </beans:beans>

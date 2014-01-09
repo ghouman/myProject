@@ -73,7 +73,7 @@ public class LoginActionBean extends AbstractActionBean {
         return new ForwardResolution(SIGNON);
     }
 
-    public Resolution signon() {
+  /*  public Resolution signon() {
         sysUser = new SysUser();
         sysUser.setUserName(userName);
         sysUser.setPassword(password);
@@ -98,7 +98,7 @@ public class LoginActionBean extends AbstractActionBean {
             return new RedirectResolution(CatalogActionBean.class);
         }
     }
-
+*/
     public Resolution signoff() {
         HttpSession s = context.getRequest().getSession();
         s.invalidate();
@@ -113,7 +113,7 @@ public class LoginActionBean extends AbstractActionBean {
     }
 
     public void clear() {
-        sysUser = new SysUser();
+        sysUser = null;//new SysUser();
         authenticated = false;
     }
 }

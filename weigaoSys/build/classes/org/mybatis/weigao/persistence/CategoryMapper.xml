@@ -4,7 +4,8 @@
 
 <mapper namespace="org.mybatis.weigao.persistence.CategoryMapper">
 
-    <cache/>
+    <cache flushInterval="36000000"
+        size="512"/>
     <!--获取所有产品类别-->
     <select id="getAllCategory" parameterType="java.lang.String" resultType="Category">
 SELECT  UID

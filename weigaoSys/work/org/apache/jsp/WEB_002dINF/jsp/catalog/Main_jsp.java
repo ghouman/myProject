@@ -235,7 +235,7 @@ public final class Main_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <script src=\"../js/bootstrap-button.js\"></script>\n");
       out.write("    <script src=\"../js/bootstrap-collapse.js\"></script>\n");
       out.write("    <script src=\"../js/bootstrap-carousel.js\"></script>\n");
-      out.write("    <script src=\"../js/bootstrap-typeahead.js\"></script>\n");
+      out.write("    <script src=\"../js/bootstrap-typeahead_u.js\"></script>\n");
       out.write("    <script src=\"../js/main.js\"></script>\n");
       out.write("\n");
       out.write("  </body>\n");

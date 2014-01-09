@@ -1,3 +1,19 @@
+function loadUserInfo() {
+        $.ajax({
+            type: "POST",
+            url: "/actions/Catalog.action?getSysUserInfo=",
+            data: "",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            dataType: "json",
+            success: function (obj) {
+                var sysUser = obj.sysUser;
+                var userName = sysUser.userName;
+                WEGO.userName  =  userName;
+                return  userName;
+            }
+        });
+}
+
 function loadSalesRegion() {
     var jsonData = [];
     $.ajax({
@@ -67,8 +83,14 @@ function loadPortList(provinceId) {
         contentType: "application/x-www-form-urlencoded; charset=utf-8",
         dataType: "json",
         success: function (obj) {
-            $('#port').replaceWith('<input id="port" name="customer.port" class="form-control" type="text">');
-            $('#port').magicSuggest({
+            //$('#port').replaceWith('<input id="port" name="customer.port" class="form-control" type="text">');
+           var page = $("#page").val();
+            if(page=='customerSurveyList'){
+                $('#port').replaceWith('<input id="port" name="customerSurvey.port" class="form-control" type="text">');
+            } else if (page=='customerList'){
+                $('#port').replaceWith('<input id="port" name="customer.port" class="form-control" type="text">');
+            }
+            var ms = $('#port').magicSuggest({
                 width: 190,
                    data: obj.vPortList,
                    resultAsString: true,

@@ -1,8 +1,5 @@
 <%@ include file="../common/IncludeTop.jsp" %>
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
-<%@ taglib prefix="stripes" uri="http://stripes.sourceforge.net/stripes.tld" %>
-<%@taglib uri="http://displaytag.sf.net" prefix="display" %>
-<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
 <script src="../js/weigao/listCustomerSurvey.js"></script>
 <link href="../css/magicsuggest-1.3.1.css" rel="stylesheet">
@@ -65,12 +62,12 @@
 
 <div class="container">
 
-
+    <input type="hidden" id="page" value="customerSurveyList">
     <ol class="breadcrumb" style="margin-top: 5px">
         <li><a href="#">客户调研列表</a></li>
     </ol>
 
-    <stripes:form beanclass="org.mybatis.weigao.web.actions.CustomerSurveyActionBean" class="form-inline">
+    <stripes:form beanclass="org.mybatis.weigao.web.actions.CustomerSurveyActionBean" class="form-inline" id="surveyForm">
         <table class="table-condensed">
             <tr>
                 <td><label for="customer">客户名称:</label></td>
@@ -88,7 +85,7 @@
                 <td><label class="sr-only" for="checked">是否提交:</label></td>
                 <td><stripes:select name="customerSurvey.checked" id="checked" style="width:192px">
                     <stripes:option value="all">请选择</stripes:option>
-                    <stripes:option value="0" selected="selected">否</stripes:option>
+                    <stripes:option value="0">否</stripes:option>
                     <stripes:option value="1">是</stripes:option>
                 </stripes:select></td>
                 <td><label  for="submit">是否初审:</label></td>
@@ -100,7 +97,7 @@
                 </stripes:select></td>
                 <td><label  for="verify">是否复审:</label></td>
                 <td><stripes:select name="customerSurvey.verify" id="verify" style="width:192px">
-                    <stripes:option value="">请选择</stripes:option>
+                    <stripes:option value="all">请选择</stripes:option>
                     <stripes:option value="0">否</stripes:option>
                     <stripes:option value="1">是</stripes:option>
 
@@ -121,11 +118,19 @@
                            value="${actionBean.customerSurvey.preparerManager}" class="form-control"/></td>
 
                 <td><label for="surveyDate" >调研日期:</label></td>
-                <td><input type="text" readonly="true" name="customerSurvey.surveyDate" class="datepicker form-control"
-                           id="surveyDate" class="form-control"></td>
-                <td><stripes:submit name="viewCustomerSurvey" value="查询" id="query" class="btn btn-primary"
-                                    style="margin-left: 5px"/></td>
-                <td></td>
+                <td ><input type="text" readonly="true"  class="datepicker form-control"
+                           id="surveyDate" style="width: 75px" placeholder="起始日期"> -
+                    <input type="text" readonly="true"  class="datepicker form-control"
+                                               id="surveyEndDate" style="width: 75px" placeholder="结束日期">
+                    <input type="hidden" id="startDate" name="customerSurvey.surveyDate"  style="width: 100px" value="${actionBean.customerSurvey.surveyDate}"/>
+                    <input type="hidden" id="endDate" name="customerSurvey.surveyEndDate" style="width: 100px" value="${actionBean.customerSurvey.surveyEndDate}"/>
+                </td>
+
+                <td colspan="2">
+                    <div id="clear" class=" btn btn-warning" style="margin-right:15px" onclick="clearVal()">清空日期</div>
+                    <stripes:submit name="viewCustomerSurvey" value="查询" id="query" class="btn btn-primary"/>
+                    <button style="display: none" id="addCustomerSurvey" class=" btn btn-info" data-toggle="modal" href="#responsive">添加</button>
+                </td>
 
             </tr>
         </table>
@@ -142,19 +147,19 @@
         <display:column property="verify" title="复审"/>
         <display:column title="调研日期"> <c:out value='${fn:substring(row.surveyDate, 0, 10)}'/></display:column>
         <display:column property="preparer" sortable="false" sortName="preparer" title="负责专员"/>
-        <display:column title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;操作">
+        <display:column title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;操作" media="html">
 
             <button type="button" class="btn btn-link" name="doupdate" style="display: none"
                     onclick="update('${row.uid}','${row.checked}','${row.submit}')">
                 修改
             </button>
             <stripes:link class="btn btn-link" beanclass="org.mybatis.weigao.web.actions.CustomerSurveyActionBean"
-                          event="viewCustomerSurveyByUID" id="view">
+                          event="viewCustomerSurveyByUID" id="view" name="view">
                 查看
                 <stripes:param name="uid" value="${row.uid}"/>
             </stripes:link>
             <button type="button" class="btn btn-link" name="dochecked" style="display:none"
-                    onclick="updateStaus('${row.uid}','${row.surveyNo}','checked','${row.checked}')">
+                    onclick="updateStaus('${row.uid}','${row.surveyNo}','checked','${row.checked}',event,'${row.preparer}')">
                 提交
             </button>
             <button type="button" class="btn btn-link" name="dosubmit" style="display:none"
@@ -236,7 +241,7 @@
     </div>
 </div>
 
-<%@ include file="../common/IncludeBottom.jsp" %>
+<%@ include file="../common/IncludeBottom.jsp"  %>
 
 <script type="text/javascript">
 

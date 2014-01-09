@@ -1,6 +1,5 @@
 <%@ include file="../common/IncludeTop.jsp" %>
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
-<%@taglib uri="http://displaytag.sf.net" prefix="display" %>
 <%--
 <link href="../displayTag/css/maven-base.css" rel="stylesheet">
 <link href="../displayTag/css/maven-theme.css" rel="stylesheet">
@@ -27,52 +26,70 @@
 <table class="table table-bordered">
     <tr>
         <th width="80">客户名称：</th>
-        <td>${actionBean.customerSurvey.customer}</td>
-        <th width="80">合作公司：</th>
-        <td colspan="3">${actionBean.customerSurvey.zect}</td>
+        <td width="25%">${actionBean.customerSurvey.customer}</td>
+        <th width="105">组织机构代码：</th>
+        <td width="25%">${actionBean.customerSurvey.zect}</td>
+        <th width="80">客户类型：</th>
+        <td>${actionBean.customerSurvey.custVal}</td>
     </tr>
     <tr>
-        <th>客户类型：</th>
-        <td>${actionBean.customerSurvey.custVal}</td>
         <th>客户地址：</th>
-        <td colspan="3">${actionBean.customerSurvey.address}</td>
+        <td>${actionBean.customerSurvey.address}</td>
+        <th>所在城市：</th>
+        <td>${actionBean.customerSurvey.port}</td>
+        <th>所属省份：</th>
+        <td>${actionBean.customerSurvey.province}</td>
     </tr>
     <tr>
         <th width="80">客户网址：</th>
-        <td>${actionBean.customerSurvey.website}</td>
-        <th width="80">医院等级：</th>
-        <td>${actionBean.customerSurvey.healthClass}</td>
-        <th width="80">行政级别：</th>
-        <td>${actionBean.customerSurvey.hierarchy}</td>
-    </tr>
-    <tr>
-        <th>合作时间：</th>
-        <td>${actionBean.customerSurvey.coop_DT}</td>
-        <th>邮编：</th>
-        <td>${actionBean.customerSurvey.postalCode}</td>
-        <th>所在城市：</th>
-        <td>${actionBean.customerSurvey.port}</td>
-    </tr>
-    <tr>
-        <th>所属省份：</th>
-        <td>${actionBean.customerSurvey.province}</td>
+        <td>
+            <c:if test="${actionBean.customerSurvey.website!='-' and fn:substring(actionBean.customerSurvey.website, 0, 4)!='http'}">
+                <a href="http://${actionBean.customerSurvey.website}"
+                   target="_blank">${actionBean.customerSurvey.website}</a>
+            </c:if>
+            <c:if test="${actionBean.customerSurvey.website!='-' and fn:substring(actionBean.customerSurvey.website, 0, 4)=='http'}">
+                <a href="${actionBean.customerSurvey.website}" target="_blank">${actionBean.customerSurvey.website}</a>
+            </c:if>
+            <c:if test="${actionBean.customerSurvey.website=='-'}">${actionBean.customerSurvey.website}</c:if>
+        </td>
         <th>负责专员：</th>
         <td> ${actionBean.customerSurvey.clerk}</td>
         <th>销售大区：</th>
         <td>${actionBean.customerSurvey.salesRegion}</td>
+
     </tr>
     <tr>
+        <th width="80">大区经理：</th>
+        <td>${actionBean.customerSurvey.manager}</td>
+        <th width="80">区域主管：</th>
+        <td>${actionBean.customerSurvey.preparerManager}</td>
+        <th width="80">医院等级：</th>
+        <td>${actionBean.customerSurvey.healthClass}</td>
+
+    </tr>
+    <tr>
+        <th width="80">行政级别：</th>
+        <td>${actionBean.customerSurvey.hierarchy}</td>
+        <th>执业许可证：</th>
+        <td>${actionBean.customerSurvey.coop_DT}</td>
         <th>所属科室：</th>
         <td>${actionBean.customerSurvey.labOffice} </td>
-        <th>所属科室电话：</th>
-        <td colspan="3">${actionBean.customerSurvey.labTel}</td>
-    </tr>
-    <!--
-    <tr>
 
-              <th width="100">医院信息：</th>
-              <td colspan="5" id="hospitalMemo">${actionBean.customerSurvey.hospitalMemo}</td>
-          </tr>  -->
+    </tr>
+    <tr>
+        <th>血透室电话：</th>
+        <td>${actionBean.customerSurvey.labTel}</td>
+        <th>邮编：</th>
+        <td>${actionBean.customerSurvey.postalCode}</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <th>医院信息</th>
+        <td colspan="5">
+            ${actionBean.customerSurvey.chospitalMemo}
+        </td>
+    </tr>
 </table>
 <hr>
 <!--相关负责人-->
@@ -85,7 +102,7 @@
         <th width='15%'>决策范围：</th>
         <th width='15%'>个人爱好：</th>
         <th width='20%'>学术影响力：</th>
-        <th width='10%'>生日：</th>
+        <th width='10%'>身份证/生日：</th>
 
 
     </tr>
@@ -95,12 +112,39 @@
 <hr>
 <table class="table table-bordered">
     <tr>
+        <th width="18%">客户调研编号</th>
+        <td width="12%">
+            ${actionBean.customerSurvey.surveyNo}
+        </td>
+        <td width="18%"></td>
+        <td width="12%"></td>
+        <th width="18%">调研日期</th>
+        <td width="12%">
+            ${actionBean.customerSurvey.surveyDate}
+        </td>
+    </tr>
+    <tr>
+        <th>提交人员：</th>
+        <td width="100">${actionBean.customerSurvey.checker} </td>
+        <th>提交状态：</th>
+        <td width="100">${actionBean.customerSurvey.checked} </td>
+        <th>提交日期：</th>
+        <td width="100">${fn:substring(actionBean.customerSurvey.checkDate, 0, 10)}</td>
+
+    </tr>
+    <tr>
         <th style="color: red; width: 180px">初审备注</th>
         <td colspan="5" style="color: red;font-weight: bolder;">
             ${actionBean.customerSurvey.submitMemo}
         </td>
-
-
+    </tr>
+    <tr>
+        <th>初审人员：</th>
+        <td width="100">${actionBean.customerSurvey.submitUser} </td>
+        <th>初审状态：</th>
+        <td width="100">${actionBean.customerSurvey.submit} </td>
+        <th>初审日期：</th>
+        <td width="100">${fn:substring(actionBean.customerSurvey.submitDate, 0, 10)}</td>
     </tr>
     <tr>
         <th style="color: red;">复审备注</th>
@@ -109,31 +153,14 @@
         </td>
     </tr>
     <tr>
-           <th>是否提交：</th>
-           <td width="100">${actionBean.customerSurvey.checked} </td>
-           <th>是否初审：</th>
-           <td width="100">${actionBean.customerSurvey.submit}</td>
-           <th>是否复审：</th>
-           <td width="100">${actionBean.customerSurvey.verify}</td>
-       </tr>
-    <tr>
-        <th>客户调研编号</th>
-        <td colspan="2">
-            ${actionBean.customerSurvey.surveyNo}
-        </td>
-        <th>调研日期</th>
-        <td colspan="2">
-            ${actionBean.customerSurvey.surveyDate}
-        </td>
-
+        <th>复审人员：</th>
+        <td width="100">${actionBean.customerSurvey.verifier}</td>
+        <th>复审状态：</th>
+        <td width="100">${actionBean.customerSurvey.verify}</td>
+        <th>复审日期：</th>
+        <td width="100">${fn:substring(actionBean.customerSurvey.verifyDate, 0, 10)}</td>
     </tr>
-    <tr>
-        <th width="100">Remark：</th>
-        <td colspan="5">
-            ${actionBean.customerSurvey.hospitalMemo}
 
-        </td>
-    </tr>
     <tr>
         <th>医生人数：</th>
         <td width="100">${actionBean.customerSurvey.doctor} </td>
@@ -144,7 +171,7 @@
     </tr>
 
     <tr>
-        <th>现有血透机数：</b></td>
+        <th>现有血透机数：</td>
             <td>${actionBean.customerSurvey.hdfMachine}</td>
         <th>血透室空间可容纳最大床位数：</th>
         <td>${actionBean.customerSurvey.hdfCapacity}</td>
@@ -212,12 +239,16 @@
         <td>${actionBean.customerSurvey.nepdF3}</td>
         <th>客户评判：</th>
         <td colspan="3">${actionBean.customerSurvey.feedback}</td>
-
-
     </tr>
     <tr>
         <th>评判说明：</th>
         <td colspan="5">${actionBean.customerSurvey.fbNote} </td>
+    </tr>
+    <tr>
+        <th width="100">调研备注：</th>
+        <td colspan="5">
+            ${actionBean.customerSurvey.hospitalMemo}
+        </td>
     </tr>
 </table>
 
@@ -233,15 +264,17 @@
 
         <th width='10%'>产品型号：</th>
 
-        <th width='10%'>数量/使用量：</th>
+        <th width='10%'>数量/复用人次：</th>
 
-        <th width='10%'>复用情况：</th>
+        <th width='10%'>复用次数：</th>
 
         <th width='10%'>市场价格：</th>
 
-        <th width='10%'>装机时间：</th>
+        <th width='8%'>初次使用时间：</th>
 
-        <th>备注：</th>
+        <th>销售公司</th>
+
+        <th>备注</th>
     </tr>
 
 
@@ -262,6 +295,9 @@
             </td>
             <td>
                     ${surveyDetail.bInstallDate}
+            </td>
+            <td>
+                    ${surveyDetail.salesAgency}
             </td>
             <td>
                     ${surveyDetail.remark}

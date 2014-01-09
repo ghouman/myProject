@@ -38,7 +38,7 @@
 </style>
 <div class="container">
 
-
+    <input type="hidden" id="page" value="customerList">
     <ol class="breadcrumb" style="margin-top: 5px">
         <li><a href="#">客户名单列表</a></li>
     </ol>
@@ -86,7 +86,7 @@
             <input type="radio" name="uid" value="${row.uid}" onclick="getValue(this)">
         </display:column>       --%>
         <display:column property="customerName" title="客户名称" style="width:15%"/>
-        <display:column property="zect" sortable="false" sortName="customerName" title="合作公司" style="width:15%"/>
+        <display:column property="zect" sortable="false" sortName="customerName" title="组织机构代码" style="width:15%"/>
         <display:column property="custVal" sortable="false" sortName="customerName" title="客户类型" style="width:10%"/>
         <display:column property="address" title="客户地址" style="width:20%"/>
         <display:column property="port" title="所在城市" style="width:8%"/>
@@ -100,7 +100,7 @@
                 修改
             </button>
             <stripes:link class="btn btn-link" beanclass="org.mybatis.weigao.web.actions.CustomerActionBean"
-                          event="viewCustomer">
+                          event="viewCustomer" name="view">
                 查看
                 <stripes:param name="uid" value="${row.uid}"/>
             </stripes:link>
@@ -132,7 +132,9 @@
                     }
             )
             //$("#clerk").attr("readonly", "true");
-        }
+        } else if (WEGO.roleWeb == "其他"){
+                 $("[name='view']").hide();
+            }
     })
 
     function updateCustomer(uid, verify) {

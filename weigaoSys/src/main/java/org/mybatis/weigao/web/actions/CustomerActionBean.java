@@ -5,16 +5,20 @@ import net.sourceforge.stripes.action.*;
 import net.sourceforge.stripes.integration.spring.SpringBean;
 import net.sourceforge.stripes.validation.Validate;
 import net.sourceforge.stripes.validation.ValidateNestedProperties;
+import org.apache.log4j.Logger;
 import org.displaytag.pagination.PaginatedList;
 import org.mybatis.weigao.common.util.core.domain.PaginatedListHelper;
 import org.mybatis.weigao.domain.Customer;
 import org.mybatis.weigao.domain.CustomerSurvey;
+import org.mybatis.weigao.domain.SysUser;
 import org.mybatis.weigao.service.CustomerService;
+import org.mybatis.weigao.service.MyUserDetailService;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.StringReader;
 import java.io.UnsupportedEncodingException;
 import java.util.Collection;
@@ -30,13 +34,15 @@ import java.util.List;
 
 public class CustomerActionBean extends AbstractActionBean {
 
-
+    private static Logger logger = Logger.getLogger(CustomerActionBean.class);
     private static final String LISTCUSTOMER = "/WEB-INF/jsp/weigao/listCustomer.jsp";
     private static final String UPDATECUSTOMER = "/WEB-INF/jsp/weigao/updateCustomer.jsp";
     private static final String VIEWCUSTOMER = "/WEB-INF/jsp/weigao/viewCustomer.jsp";
 
     @SpringBean
     private transient CustomerService customerService;
+    @SpringBean
+    private transient MyUserDetailService myUserDetailService;
 
 
     private static List<Customer> customerList;
@@ -78,17 +84,20 @@ public class CustomerActionBean extends AbstractActionBean {
     public ForwardResolution listCustomer() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         Collection collectionAuth = auth.getAuthorities();
+
+        String userName = this.getSysUser().getUserName();
+
         if (customer == null) {
             customer = new Customer();
         }
         if (collectionAuth.toString().contains("业务员")) {
-            customer.setClerk(auth.getName());
+            customer.setClerk(userName);
         } else if (collectionAuth.toString().contains("区域主管")) {
-            customer.setPreparerManager(auth.getName());
+            customer.setPreparerManager(userName);
         } else if (collectionAuth.toString().contains("大区经理")) {
-            customer.setManager(auth.getName());
-        } else if (collectionAuth.toString().contains("客服部")) {
-            customer.setManagerEng(auth.getName());
+            customer.setManager(userName);
+        } else if (collectionAuth.toString().contains("客服部")||collectionAuth.toString().contains("普通客服")) {
+            customer.setManagerEng(userName);
         }
         HttpServletRequest request = context.getRequest();
                 /*
@@ -146,17 +155,18 @@ public class CustomerActionBean extends AbstractActionBean {
     public StreamingResolution showCustomer() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         Collection collectionAuth = auth.getAuthorities();
+        String userName = this.getSysUser().getUserName();
         if (customer == null) {
             customer = new Customer();
         }
         if (collectionAuth.toString().contains("业务员")) {
-            customer.setClerk(auth.getName());
+            customer.setClerk(userName);
         } else if (collectionAuth.toString().contains("区域主管")) {
-            customer.setPreparerManager(auth.getName());
+            customer.setPreparerManager(userName);
         } else if (collectionAuth.toString().contains("大区经理")) {
-            customer.setManager(auth.getName());
+            customer.setManager(userName);
         } else if (collectionAuth.toString().contains("客服部")) {
-            customer.setManagerEng(auth.getName());
+            customer.setManagerEng(userName);
         }
         HttpServletRequest request = context.getRequest();
         String customerName = request.getParameter("customerName");
@@ -193,12 +203,18 @@ public class CustomerActionBean extends AbstractActionBean {
     public Resolution updateCustomer() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         Collection collectionAuth = auth.getAuthorities();
+        String userName = this.getSysUser().getUserName();
         if (collectionAuth.toString().contains("业务员")) {
-            customer.setOperator(auth.getName());
-            customer.setClerk(auth.getName());
+            customer.setOperator(userName);
+            customer.setClerk(userName);
         }
-        customerService.updateCustomer(customer);
+        customerService.updateCustomer(customer, userName);
         return new ForwardResolution("/WEB-INF/jsp/weigao/redriect.jsp?flag=customer");
     }
 
+
+    public SysUser getSysUser() {
+        SysUser sysUser = (SysUser) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        return sysUser;
+    }
 }

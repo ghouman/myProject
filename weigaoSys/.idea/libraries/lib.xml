@@ -4,7 +4,76 @@
       <root url="file://$PROJECT_DIR$/WebContent/WEB-INF/lib" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="file://E:/study/spring security/spring-security-master/acl/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/acl/src/test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/aspects/src/test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/cas/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/cas/src/test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/config/src/integration-test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/config/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/config/src/test/groovy" />
+      <root url="file://E:/study/spring security/spring-security-master/config/src/test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/core/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/core/src/test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/crypto/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/crypto/src/test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/itest/context/src/integration-test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/itest/context/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/itest/misc/src/integration-test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/itest/web/src/integration-test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/itest/web/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/ldap/src/integration-test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/ldap/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/ldap/src/test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/openid/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/openid/src/test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/remoting/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/remoting/src/test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/aspectj-xml/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/aspectj-xml/src/test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/cas/sample-xml/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/concurrency-jc/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/concurrency-jc/src/test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/contacts-xml/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/contacts-xml/src/test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/dms-xml/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/dms-xml/src/test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/form-jc/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/form-jc/src/test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/gae-xml/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/gae-xml/src/test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/hellojs-jc/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/hellojs-jc/src/test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/hellomvc-jc/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/hellomvc-jc/src/test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/helloworld-jc/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/helloworld-jc/src/test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/inmemory-jc/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/inmemory-jc/src/test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/jaas-xml/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/jdbc-jc/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/jdbc-jc/src/test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/ldap-jc/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/ldap-jc/src/test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/messages-jc/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/openid-jc/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/openid-jc/src/test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/openid-xml/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/preauth-jc/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/preauth-jc/src/test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/rememberme-jc/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/rememberme-jc/src/test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/servletapi-xml/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/tutorial-xml/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/x509-jc/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/samples/x509-jc/src/test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/sandbox/heavyduty/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/taglibs/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/taglibs/src/test/java" />
+      <root url="file://E:/study/spring security/spring-security-master/web/src/main/java" />
+      <root url="file://E:/study/spring security/spring-security-master/web/src/test/java" />
+    </SOURCES>
     <jarDirectory url="file://$PROJECT_DIR$/WebContent/WEB-INF/lib" recursive="false" />
   </library>
 </component>

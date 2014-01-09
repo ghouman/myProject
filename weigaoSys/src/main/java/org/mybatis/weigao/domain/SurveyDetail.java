@@ -32,12 +32,21 @@ public class SurveyDetail implements Serializable {
     private int bReUseNote;  //复用情况
     private String bInstallDate; //装机日期
     private String remark;
+    private String salesAgency;
 
     private String category;
     private String brand;
     private String family;
     private String partNo;
     private String unit;
+
+    public String getSalesAgency() {
+        return salesAgency;
+    }
+
+    public void setSalesAgency(String salesAgency) {
+        this.salesAgency = salesAgency;
+    }
 
     public int getUid() {
         return uid;

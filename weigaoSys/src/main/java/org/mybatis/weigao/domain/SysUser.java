@@ -1,7 +1,13 @@
 package org.mybatis.weigao.domain;
 
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
+import java.util.HashSet;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,8 +18,8 @@ import java.util.Date;
  */
 
 
-public class SysUser
-        implements Serializable {
+public  class SysUser
+        implements Serializable ,UserDetails {
     private static final long serialVersionUID = -1L;
     private Long no;
     private String userId;
@@ -28,6 +34,16 @@ public class SysUser
     private boolean floor = false;
     private boolean isResearchAdmin;
     private boolean isSalesFloor ;
+
+    private Collection grantedAuths = new HashSet();
+
+    public Collection getGrantedAuths() {
+        return grantedAuths;
+    }
+
+    public void setGrantedAuths(Collection grantedAuths) {
+        this.grantedAuths = grantedAuths;
+    }
 
     public boolean isSalesFloor() {
         return isSalesFloor;
@@ -85,8 +101,41 @@ public class SysUser
         this.userId = userId;
     }
 
+    @Override
+    public Collection<GrantedAuthority> getAuthorities() {
+        return this.getGrantedAuths();  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
     public String getPassword() {
         return this.password;
+    }
+
+    @Override
+    public String getUsername() {
+        return this.getUserId();  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        if(this.getRoleWeb()==null){
+            return false;
+        }
+        return true;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return adapted;  //To change body of implemented methods use File | Settings | File Templates.
     }
 
     public void setPassword(String password) {

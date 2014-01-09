@@ -40,13 +40,13 @@
           </p>
             <ul class="masthead-links">
                   <li>
-                    <a >©2013 Gisco and/or its affiliates. All rights reserved.</a>
+                    <a >©2013 ghouman and/or its affiliates. All rights reserved.</a>
                   </li>
                   <li>
 
                   </li>
                   <li>
-                    ghouman@cisco.com
+                      xiaoqiang.huang@wgbp.net
                   </li>
                   <li>
                     Version 1.0

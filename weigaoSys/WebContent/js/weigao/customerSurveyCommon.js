@@ -39,18 +39,24 @@ function loadStaffInfo(uid) {
             $("#tr_customerStaff").replaceWith(tr_customerStaff);
         },
         error: function () {
-            alert("加载负责人失败,请重试");
+            console.log("加载负责人失败,请重试")
         }
     });
 }
 
 function initCustomer(jsonObj) {
+    var websiteUrl = jsonObj.website;
+        if(websiteUrl.substring(0,4)!='http'){
+            websiteUrl = 'http:' + websiteUrl;
+        } else if (websiteUrl=='-'){
+            websiteUrl="#";
+        }
     $('#customerId').val(jsonObj.uid);
     $('#customer').append(jsonObj.customerName);
     $('#zect').append(jsonObj.zect);
     $('#custVal').append(jsonObj.custVal);
     $('#address').append(jsonObj.address);
-    $('#webSite').append(jsonObj.website);
+    $('#webSite').append('<a href='+websiteUrl+'>'+jsonObj.website+'</a>');
     $('#healthClass').append(jsonObj.healthClass);
     $('#hierarchy').append(jsonObj.hierarchy);
     $('#coop_DT').append(jsonObj.coop_DT);
@@ -61,7 +67,10 @@ function initCustomer(jsonObj) {
     $('#salesRegion').append(jsonObj.salesRegion);
     $('#labOffice').append(jsonObj.labOffice);
     $('#labTel').append(jsonObj.labTEL);
-    $('#hospitalMemo').append(jsonObj.hospitalMemo);
+    $('#chospitalMemo').append(jsonObj.hospitalMemo);
+
+    $('#manager').append(jsonObj.manager);
+    $('#preparerManager').append(jsonObj.salesFloor);
 
     //$('#surveyDate').datepicker();
     // var currentDate = getCurrentDate();
@@ -213,7 +222,8 @@ function addProdLine() {
         "<td><input type='number' value='0' required style='width:60px' id='price'/></td>" +
         "<td><input type='text' class='datepicker' style='width:100px'  id='date" + tr_id + "'" +
         " /></td>" +
-        "<td><textarea  id='remark' style='width:90%' placeholder='请输入备注'></textarea></td>" +
+        "<td><input type='text' style='width:100px' id='salesAgency'/></td>" +
+        "<td><textarea id='remark' style='width:90%' ></textarea></td>" +
         "<input type='hidden' id='partNoUid' value='" + partNoUid + "'>" +
         "<td><div class='btn btn-primary' onclick='removeProd(" + tr_id + ")'>移除</div></td></tr>"
 
@@ -253,6 +263,7 @@ function getCustomerSurveyDetail() {
                 obj.partID = $(this).find("#partNoUid").val(); //规格ID
                 obj.bReUseNote = $(this).find("#reUseInfo").val();//复用说明
                 obj.bInstallDate = $(this).find(".datepicker").val(); //装机日期
+                obj.salesAgency =  $(this).find("#salesAgency").val(); //装机日期
                 obj.remark = $(this).find("#remark").val();
                 isAddProd = true;
                 arrayObj.push(obj);

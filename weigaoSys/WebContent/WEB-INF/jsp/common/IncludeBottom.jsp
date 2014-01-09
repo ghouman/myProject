@@ -11,7 +11,7 @@
 <!-- Le javascript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-
+<%--
 <script src="../bootstrap/js/bootstrap-transition.js"></script>
 <script src="../bootstrap/js/bootstrap-alert.js"></script>
 <script src="../bootstrap/js/bootstrap-modal.js"></script>
@@ -25,20 +25,26 @@
 <script src="../bootstrap/js/bootstrap-collapse.js"></script>
 <script src="../bootstrap/js/bootstrap-carousel.js"></script>
 <script src="../bootstrap/js/bootstrap-typeahead.js"></script>
+--%>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../bootstrap/js/bootstrap-modalmanager.js"></script>
+<script src="../bootstrap/js/bootstrap-modal.js"></script>
+
 <script src="../bootstrap/js/bootstrap-datepicker.js"></script>
 
-<script src="../js/common/jquery.validate.js"></script>
+<script src="../js/common/jquery.validate.min.js"></script>
 <script src="../js/common/messages_zh.js"></script>
 
-<script src="../bootstrap/js/main.js"></script>
 <%--
+<script src="../bootstrap/js/main.js"></script>
+
     <script src="../bootstrap/js/sco.valid.js"></script>
 <script src="../bootstrap/js/qunit-1.11.0.js"></script>
 <script src="../bootstrap/js/spin.js"></script>
 <script src="../bootstrap/js/jquery.mockjax.js"></script>
 <script src="../bootstrap/js/jquery.form.js"></script>   --%>
 
-<%--<script src="../bootstrap/js/bootstrap.js"></script> --%>
+<%--<script src="../bootstrap/js/bootstrap_3.0.2.js"></script> --%>
 
 </body>
 

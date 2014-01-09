@@ -50,37 +50,37 @@ public class CustomerSurveyService {
 
     //更新调研产品明细， 先删除在增加
     @Transactional
-    public void updateCustomerSurvey(CustomerSurvey customerSurvey) {
+    public void updateCustomerSurvey(CustomerSurvey customerSurvey,String userName) {
         customerSurveyMapper.updateCustomerSurvey(customerSurvey);
         surveyDetailMapper.delAllDetailBySurveyNo(customerSurvey.getSurveyNo());
-        this.saveSurveyDetail(customerSurvey.getJsonString());
+        this.saveSurveyDetail(customerSurvey.getJsonString(),userName);
     }
 
     //保存调研产品明细
-    private void saveSurveyDetail(String jsonString) {
+    private void saveSurveyDetail(String jsonString,String userName) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         if (!StringUtil.isEmpty(jsonString)) {
             List<SurveyDetail> surveyDetailList = JsonUtil.getDTOList(jsonString, SurveyDetail.class);
             for (int i = 0; i < surveyDetailList.size(); i++) {
                 SurveyDetail surveyDetail = surveyDetailList.get(i);
-                surveyDetail.setCreator(auth.getName());
-                surveyDetail.setOperator(auth.getName());
+                surveyDetail.setCreator(userName);
+                surveyDetail.setOperator(userName);
                 surveyDetailMapper.addSurveyDetail(surveyDetail);//保存调研产品明细
             }
         }
     }
 
     @Transactional
-    public void addCustomerSurvey (CustomerSurvey customerSurvey) throws DataAccessException {
-        /*CustomerSurvey customerSurvey1 = new CustomerSurvey();
+    public void addCustomerSurvey (CustomerSurvey customerSurvey,String userName) throws DataAccessException {
+        CustomerSurvey customerSurvey1 = new CustomerSurvey();
         customerSurvey1.setSurveyNo(customerSurvey.getSurveyNo());
         int size = customerSurveyMapper.countSurveySize(customerSurvey1);
         if(size>0){ //数据库已经存在，重新获取
             String surveyNo = this.getSurveyNo();
             customerSurvey.setSurveyNo(surveyNo);
-        }*/
+        }
         customerSurveyMapper.addCustomerSurvey(customerSurvey);//保存调研信息
-        this.saveSurveyDetail(customerSurvey.getJsonString());
+        this.saveSurveyDetail(customerSurvey.getJsonString(),userName);
     }
 
 

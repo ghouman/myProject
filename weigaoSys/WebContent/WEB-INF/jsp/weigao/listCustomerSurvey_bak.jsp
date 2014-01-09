@@ -267,7 +267,7 @@
                 //debugger;
                 var customerList = obj.customerList;
                 // var tr_html;
-                var tbody_customer = '<tbody id="tr_customer"><tr><th></th><th>客户名称</th> <th>所属医院</th><th>业务员</th><th>销售大区</th></tr>';
+                var tbody_customer = '<tbody id="tr_customer"><tr><th></th><th>客户名称</th> <th>合作公司</th><th>业务员</th><th>销售大区</th></tr>';
                 if ($("#tr_customer")) {
                     $("#tr_customer").remove();
                 }

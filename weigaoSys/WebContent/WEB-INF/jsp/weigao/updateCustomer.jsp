@@ -1,6 +1,5 @@
 <%@ include file="../common/IncludeTop.jsp" %>
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
-<%@taglib uri="http://displaytag.sf.net" prefix="display" %>
 <script src="../js/common/jquery.validate.js"></script>
 <script src="../js/common/messages_zh.js"></script>
 <script src="../js/weigao/customerCommon.js"></script>
@@ -24,24 +23,23 @@
 <div class="container">
     <stripes:form beanclass="org.mybatis.weigao.web.actions.CustomerActionBean" class="form-inline"
                   id="customerForm" action="Customer.action?updateCustomer">
+
         <table class="table table-bordered">
             <tr>
                 <th width="80">客户名称：</th>
-                <td><input type="text" name="customer.customerName" class="form-control" id="customerName"
+                <td  width="25%"><input type="text" name="customer.customerName" class="form-control" id="customerName"
                            placeholder="请输入客户名称"
                            value="${actionBean.customer.customerName}" readonly="true" required>
                         <%--<stripes:text name="customer.customerName" class="form-control" id="customerName"/>--%></td>
-                <th width="80">合作公司：</th>
-                <td><input type="text" name="customer.zect" class="form-control" id="zect" placeholder="请输入合作公司"
+                <th width="80">组织机构代码：</th>
+                <td  width="25%"><input type="text" name="customer.zect" class="form-control" id="zect" placeholder="请输入组织机构代码"
                            value="${actionBean.customer.zect}" required>
                         <%--<stripes:text name="customer.zect" class="form-control" id="zect"/>--%></td>
                 <th width="80">客户类型：</th>
                 <td><stripes:select name="customer.custVal" id="custVal" value="${actionBean.customer.custVal}"
                                     class="form-control">
                     <stripes:option value="现有客户">现有客户</stripes:option>
-                    <stripes:option value="近期潜在客户">近期潜在客户</stripes:option>
-                    <stripes:option value="远期潜在客户">远期潜在客户</stripes:option>
-                    <stripes:option value="其他">其他</stripes:option>
+                    <stripes:option value="潜在客户">潜在客户</stripes:option>
                 </stripes:select>
                         <%--<stripes:text name="customer.custVal" class="form-control" id="custVal"/>--%></td>
             </tr>
@@ -86,7 +84,8 @@
                 <th>区域主管：</th>
                 <td>${actionBean.customer.salesFloor }</td>
                 <th>医院等级：</th>
-                <td><stripes:select name="customer.healthClass" value="${actionBean.customer.healthClass}"
+                <td>
+                    <stripes:select name="customer.healthClass" value="${actionBean.customer.healthClass}"
                                     id="healthClass" class="form-control">
                     <stripes:option value="三甲">三甲</stripes:option>
                     <stripes:option value="三乙">三乙</stripes:option>
@@ -111,7 +110,7 @@
                     <stripes:option value="其他">其他</stripes:option>
                 </stripes:select>
                         <%--<stripes:text name="customer.hierarchy" class="form-control" id="hierarchy"/>--%></td>
-                <th>合作时间：</th>
+                <th>执业许可证：</th>
                 <td>
                     <input type="text" name="customer.coop_DT" value="${actionBean.customer.coop_DT}"
                            class="datepicker form-control" id="coop_DT">
@@ -134,7 +133,7 @@
                     </stripes:select>
 
                 </td>
-                <th>所属科室电话：</th>
+                <th>血透室电话：</th>
                 <td>
                     <stripes:text name="customer.labTEL" maxlength="12" value="${actionBean.customer.labTEL}"
                                   class="form-control" id="labTEL"/>
@@ -161,13 +160,13 @@
         <table class="table table-bordered" id="tr_category">
             <tbody>
             <tr id="0">
-                <th width='8%'>负责人：</th>
-                <th width='8%'>职务：</th>
+                <th width='7%'>负责人：</th>
+                <th width='11%'>职务：</th>
                 <th width='10%'>联系方式：</th>
                 <th width='10%'>决策范围：</th>
                 <th width='15%'>个人爱好：</th>
                 <th width='15%'>学术影响力：</th>
-                <th width='10%'>生日：</th>
+                <th width='10%'>身份证/生日：</th>
                 <th width='7%'>操作：</th>
 
             </tr>

@@ -17,5 +17,5 @@ public interface SysUserMapper {
     public List<SysUser> getSysUser(SysUser SysUser);
 
 
-    public List<SysUser> getSysUserByName(String userName);
+    public List<SysUser> getSysUserByUid(String userId);
 }

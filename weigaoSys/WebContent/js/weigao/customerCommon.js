@@ -1,4 +1,3 @@
-
 function loadUpdateStaffInfo(uid) {
     //加载负责人信息
     var tr_id = 0;
@@ -19,8 +18,17 @@ function loadUpdateStaffInfo(uid) {
                 var that = this;
                 tr_customerStaff = tr_customerStaff + '<tr id=' + tr_id + '>' +
                     '<td ><input type="text" style="width:90%" id="staff" required value=' + that.staff + ' ></td>' +
-                    '<td ><input type="text" style="width:90%" id="staffDuty"' +
-                    'data-provide="typeahead" data-source=["院长","副院长","设备负责人","财务负责人","血透室主任","肾内科主任","护士长","工程师"] value=' + that.staffDuty + '></td>' +
+                    '<td ><select style="width:100%"  name="staffDuty" id="staffDuty"' +
+                    ' value=' + that.staffDuty + ' >' +
+                    '<option value="院长">院长</option>' +
+                    '<option value="副院长">副院长</option>' +
+                    '<option value="设备负责人">设备负责人</option>' +
+                    '<option value="财务负责人">财务负责人</option>' +
+                    '<option value="血透室主任">血透室主任</option>' +
+                    '<option value="肾内科主任">肾内科主任</option>' +
+                    '<option value="护士长">护士长</option>' +
+                    '<option value="工程师">工程师</option>' +
+                    '</select><input type="hidden" value="'+that.staffDuty+'"> </td>' +
                     '<td ><input type="text" style="width:90%" id="staffTel" value=' + that.staffTel + '></td>' +
                     '<td ><input type="text" style="width:90%" id="staffForce" value=' + this.staffForce + '></td>' +
                     '<td ><input type="text" style="width:90%" id="staffFavor" value=' + this.staffFavor + '></td>' +
@@ -30,9 +38,13 @@ function loadUpdateStaffInfo(uid) {
             });
             //$('#staffBirth').datepicker();
             $("#tr_customerStaff").replaceWith(tr_customerStaff);
+            $('select[name=staffDuty]').each(function () {
+                var selectVal = $(this).next().val();
+                $(this).find("option[value=" + selectVal + "]").attr("selected", true)
+            });
         },
         error: function () {
-            alert("加载负责人失败,请重试");
+            //alert("加载负责人失败,请重试");
         }
     });
 }
@@ -69,7 +81,8 @@ function loadStaffInfo(uid) {
             $("#tr_customerStaff").replaceWith(tr_customerStaff);
         },
         error: function () {
-            alert("加载负责人失败,请重试");
+            console.log("加载负责人失败,请重试");
+            //alert("加载负责人失败,请重试");
         }
     });
 }
@@ -79,8 +92,16 @@ function addCustomerLine() {
     tr_id++;
     var tr_html = '<tr id=' + tr_id + '>' +
         '<td ><input type="text" style="width:90%" id="staff" required></td>' +
-        '<td ><input type="text" style="width:90%" id="staffDuty" ' +
-        'data-provide="typeahead" data-source=["院长","副院长","设备负责人","财务负责人","血透室主任","肾内科主任","护士长","工程师"]></td>' +
+        '<td ><select style="width:100%"  name="staffDuty" id="staffDuty" >' +
+        '<option value="院长">院长</option>' +
+        '<option value="副院长">副院长</option>' +
+        '<option value="设备负责人">设备负责人</option>' +
+        '<option value="财务负责人">财务负责人</option>' +
+        '<option value="血透室主任">血透室主任</option>' +
+        '<option value="肾内科主任">肾内科主任</option>' +
+        '<option value="护士长">护士长</option>' +
+        '<option value="工程师">工程师</option>' +
+        '</select></td>' +
         '<td ><input type="text" style="width:90%" id="staffTel" ></td>' +
         '<td ><input type="text" style="width:90%" id="staffForce" ></td>' +
         '<td ><input type="text" style="width:90%" id="staffFavor" ></td>' +
@@ -141,8 +162,8 @@ function getProvinceList() {
             $("#province").children().remove();
             $(vPortList).each(function () {
                 var that = this;
-                if(province == that.province){
-                    provinceId =   that.provinceId;
+                if (province == that.province) {
+                    provinceId = that.provinceId;
                     option_ca = option_ca + "<option selected='selected' value='" + that.provinceId + "' >" + that.province + "</option>";
                 } else {
                     option_ca = option_ca + "<option value='" + that.provinceId + "' >" + that.province + "</option>";
@@ -154,32 +175,32 @@ function getProvinceList() {
     });
 }
 
-function loadPort(provinceId){
-    if(provinceId==undefined){
+function loadPort(provinceId) {
+    if (provinceId == undefined) {
         var objS = document.getElementById("province");
-            provinceId = objS.options[objS.selectedIndex].value;
+        provinceId = objS.options[objS.selectedIndex].value;
     }
     $.ajax({
-            type: "POST",
-            url: "/actions/VPort.action?getPortList=",
-            data: "provinceId="+provinceId,
-            contentType: "application/x-www-form-urlencoded; charset=utf-8",
-            dataType: "json",
-            success: function (obj) {
-                var vPortList = obj.vPortList;
-                var option_ca = "";
-                $("#portID").children().remove();
-                $(vPortList).each(function () {
-                    var that = this;
-                    if($("#port").val()==that.uid){
-                        option_ca = option_ca + "<option selected='selected' value='" + that.uid + "' >" + that.port + "</option>";
-                    } else {
-                        option_ca = option_ca + "<option value='" + that.uid + "' >" + that.port + "</option>";
-                    }
-                });
-                $("#portID").append(option_ca);
-            }
-        });
+        type: "POST",
+        url: "/actions/VPort.action?getPortList=",
+        data: "provinceId=" + provinceId,
+        contentType: "application/x-www-form-urlencoded; charset=utf-8",
+        dataType: "json",
+        success: function (obj) {
+            var vPortList = obj.vPortList;
+            var option_ca = "";
+            $("#portID").children().remove();
+            $(vPortList).each(function () {
+                var that = this;
+                if ($("#port").val() == that.uid) {
+                    option_ca = option_ca + "<option selected='selected' value='" + that.uid + "' >" + that.port + "</option>";
+                } else {
+                    option_ca = option_ca + "<option value='" + that.uid + "' >" + that.port + "</option>";
+                }
+            });
+            $("#portID").append(option_ca);
+        }
+    });
 }
 
 function showProvinceList() {

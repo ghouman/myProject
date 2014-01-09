@@ -25,11 +25,11 @@
     <%--<stripes:form beanclass="org.mybatis.weigao.web.actions.CustomerActionBean" class="form-inline"> --%>
     <table class="table table-bordered">
         <tr>
-            <th>客户名称：</th>
-            <td>${actionBean.customer.customerName}</td>
-            <th>所属医院：</th>
-            <td>${actionBean.customer.zect}</td>
-            <th>客户类型：</th>
+            <th width=80>客户名称：</th>
+            <td  width="25%">${actionBean.customer.customerName}</td>
+            <th width=105>组织机构代码：</th>
+            <td  width="25%">${actionBean.customer.zect}</td>
+            <th width=80>客户类型：</th>
             <td>${actionBean.customer.custVal}</td>
         </tr>
         <tr>
@@ -43,7 +43,15 @@
         </tr>
         <tr>
             <th>客户网址：</th>
-            <td>${actionBean.customer.website}</td>
+            <td>
+                <c:if test="${actionBean.customer.website!='-' and fn:substring(actionBean.customer.website, 0, 4)!='http'}">
+                    <a href="http://${actionBean.customer.website}" target="_blank">${actionBean.customer.website}</a>
+                </c:if>
+                <c:if test="${actionBean.customer.website!='-' and fn:substring(actionBean.customer.website, 0, 4)=='http'}">
+                    <a href="${actionBean.customer.website}" target="_blank">${actionBean.customer.website}</a>
+                </c:if>
+                <c:if test="${actionBean.customer.website=='-'}">${actionBean.customer.website}</c:if>
+            </td>
             <th>负责专员：</th>
             <td>${actionBean.customer.clerk}</td>
             <th>销售大区：</th>
@@ -61,7 +69,7 @@
         <tr>
             <th>行政级别：</th>
             <td>${actionBean.customer.hierarchy}</td>
-            <th>合作时间：</th>
+            <th>执业许可证：</th>
             <td>${actionBean.customer.coop_DT}</td>
             <th>邮编：</th>
             <td>${actionBean.customer.postalCode}</td>
@@ -72,18 +80,18 @@
             <td>
                 ${actionBean.customer.labOffice}
             </td>
-            <th>所属科室电话：</th>
-            <td >
+            <th>血透室电话：</th>
+            <td>
                 ${actionBean.customer.labTEL}
             </td>
             <th>是否审核：</th>
-                       <td >
-                           ${actionBean.customer.verify}
-                       </td>
+            <td>
+                ${actionBean.customer.verify}
+            </td>
         </tr>
         <tr>
             <th>医院信息：</th>
-            <td colspan="5">
+            <td colspan="5" style="height: 50px">
                 ${actionBean.customer.hospitalMemo}
             </td>
         </tr>
@@ -104,7 +112,7 @@
             <th width='20%'>个人爱好：</th>
 
             <th width='20%'>学术影响力：</th>
-            <th width='10%'>生日：</th>
+            <th width='10%'>身份证/生日：</th>
 
         </tr>
         <tr id="tr_customerStaff"></tr>

@@ -48,6 +48,9 @@ public class Customer implements Serializable {
     private String verifyDate;
     private String province;
     private String salesFloor;
+    private String surveyNo;
+    private boolean isCheck;
+    private String surveyId;
 
     private int fromIndex = 0;
     private int toIndex = 15;
@@ -57,6 +60,30 @@ public class Customer implements Serializable {
     private String preparerManager;//区域主管
 
     private String jsonString;
+
+    public String getSurveyId() {
+        return surveyId;
+    }
+
+    public void setSurveyId(String surveyId) {
+        this.surveyId = surveyId;
+    }
+
+    public boolean isCheck() {
+        return isCheck;
+    }
+
+    public void setCheck(boolean check) {
+        isCheck = check;
+    }
+
+    public String getSurveyNo() {
+        return surveyNo;
+    }
+
+    public void setSurveyNo(String surveyNo) {
+        this.surveyNo = surveyNo;
+    }
 
     public String getPreparerManager() {
         return preparerManager;

@@ -4,11 +4,12 @@
 
 <mapper namespace="org.mybatis.weigao.persistence.SurveyDetailMapper">
 
-    <cache/>
+    <cache flushInterval="36000000"
+            size="512"/>
 
     <select id="getSurveyDetail" parameterType="int" resultType="SurveyDetail">
         SELECT     B.UID,PN4.Category, PN3.Brand, PN2.Family, PN1.PartNo,B.PartID,
-      PN1.Unit, B.AHSCA, B.APrice, b.BReUseNote,b.BInstallDate,b.Remark
+      PN1.Unit, B.AHSCA, B.APrice, b.BReUseNote,b.BInstallDate,b.Remark,b.salesAgency
         FROM         dbo.oSurvey AS A INNER JOIN
                               dbo.oSurveyDtl AS B ON A.UID = B.SurveyID LEFT OUTER JOIN
                               dbo.b1PartNo AS PN1 ON B.PartID = PN1.UID LEFT OUTER JOIN
@@ -27,6 +28,7 @@
                            ,[BReUseNote]    = #{bReUseNote}
                            ,[BInstallDate]  = #{bInstallDate}
                            ,[Remark]     = #{remark}
+                           ,salesAgency = #{salesAgency}
         WHERE UID =  #{uid}
     </update>
 
@@ -50,7 +52,8 @@
                    ,[APrice]
                    ,[BReUseNote]
                    ,[BInstallDate]
-                   ,[Remark])
+                   ,[Remark]
+                   ,[SalesAgency])
              VALUES
              (
              #{select},
@@ -65,7 +68,8 @@
              #{aPrice},
              #{bReUseNote},
              #{bInstallDate},
-             #{remark}
+             #{remark},
+             #{salesAgency}
              )
     </insert>
 </mapper>

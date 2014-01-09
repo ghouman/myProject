@@ -4,7 +4,8 @@
 
 <mapper namespace="org.mybatis.weigao.persistence.CustomerStaffMapper">
 
-    <cache/>
+    <cache flushInterval="36000000"
+        size="512"/>
 
     <select id="getCustomerStaff" parameterType="CustomerStaff" resultType="CustomerStaff">
         SELECT UID

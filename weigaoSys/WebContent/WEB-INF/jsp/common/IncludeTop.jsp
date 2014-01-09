@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
-<%@ taglib prefix="stripes"
-           uri="http://stripes.sourceforge.net/stripes.tld" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -22,6 +17,11 @@
     <meta http-equiv="expires" content="0"/>
     <meta http-equiv="Expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
     <meta http-equiv="Pragma" content="no-cache"/>
+    <%@ taglib prefix="stripes" uri="http://stripes.sourceforge.net/stripes.tld" %>
+    <%@ taglib uri="http://displaytag.sf.net" prefix="display" %>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
     <script src="../bootstrap/js/jquery.js"></script>
     <script src="../js/common/common.js"></script>
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -36,8 +36,6 @@
     <link href="../bootstrap/css/datepicker.css" rel="stylesheet">
     <link href="../bootstrap/css/bootstrap-modal.css" rel="stylesheet">
     <link href="../bootstrap/js/google-code-prettify/prettify.css" rel="stylesheet">
-
-    <link href="../bootstrap/css/scojs.css" rel="stylesheet">
     <style type="text/css">
         <!--
         #pagebody {
@@ -63,27 +61,13 @@
 
         -->
     </style>
-    <script type="text/javascript">
-        function logout() {
-            $("#userName").val('');
-            $("#authenticated").val('');
-            $("#roleWeb").val('');
-            WEGO.authenticated = '';
-            WEGO.roleWeb = '';
-            WEGO.userName = '';
-            //window.location.href="/Login.action?signoff="
-            window.location.href = "/logout";
-        }
-
-    </script>
-
 
 </head>
 
 <body id="pagebody">
 <div style="">
 
-    <input type="hidden" id="userName" value="<sec:authentication property="name" />">
+    <input type="hidden" id="userName" value="<sec:authentication property="principal.userName"/>">
     <INPUT type="hidden" id="authHidden" value="<sec:authentication property='principal.authorities'/>"/>
 
 </div>
@@ -128,7 +112,7 @@
                     </li>   -->
                 </ul>
                 <ul class="nav pull-right" id="main-menu-right">
-                    <li><a href="#">欢迎<sec:authentication property="name"/>！</a></li>
+                    <li><a href="#">欢迎 <sec:authentication property="principal.userName"/>！</a></li>
                     <li>
                         <a href="#" onclick="logout()">注销
                             <i class="icon-share-alt"></i>
@@ -142,9 +126,7 @@
 
 <script type="text/javascript">
     var WEGO = {};
-    var userName = $("#userName").val();
-    WEGO.userName = userName;
-
+    WEGO.userName = $("#userName").val();
     var auth = $("#authHidden").val();
     if (auth.indexOf("业务员") > -1) {
         WEGO.roleWeb = "业务员";
@@ -152,14 +134,15 @@
         WEGO.roleWeb = "区域主管";
     } else if (auth.indexOf("大区经理") > -1) {
         WEGO.roleWeb = "大区经理";
-    } else if (auth.indexOf("客服部") > -1 && !(userName == '胡晓红' || userName == '黄小强')) {
+    } else if (auth.indexOf("客服部") > -1) {
         WEGO.roleWeb = "客服部";
     }
-    else if (auth.indexOf("系统管理员") > -1 || (userName == '胡晓红' || userName == '黄小强')) {
+    else if (auth.indexOf("系统管理员") > -1) {
         WEGO.roleWeb = "系统管理员";
+    } else if (auth.indexOf("经理室") > -1) {
+        WEGO.roleWeb = "经理室";
     } else {
         WEGO.roleWeb = "其他";
     }
-
 
 </script>

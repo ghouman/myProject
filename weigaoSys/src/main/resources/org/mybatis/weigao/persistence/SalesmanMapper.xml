@@ -4,7 +4,8 @@
 
 <mapper namespace="org.mybatis.weigao.persistence.SalesmanMapper">
 
-  <cache />
+    <cache flushInterval="60000"
+            size="512"/>
 
     <select id="getSalesmanByManagername" parameterType="string" resultType="Salesman">
            select * from (
